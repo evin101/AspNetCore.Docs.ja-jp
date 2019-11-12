@@ -16,7 +16,7 @@ ms.locfileid: "72390830"
 ---
 # <a name="call-a-web-api-from-aspnet-core-blazor"></a>ASP.NET Core Blazor から web API を呼び出す
 
-[Luke Latham](https://github.com/guardrex)、 [Daniel Roth](https://github.com/danroth27)、[フアン De la クルス](https://github.com/juandelacruz23)
+作成者: [Luke Latham](https://github.com/guardrex)、 [Daniel Roth](https://github.com/danroth27)、[フアン De la クルス](https://github.com/juandelacruz23)
 
 [!INCLUDE[](~/includes/blazorwasm-preview-notice.md)]
 
