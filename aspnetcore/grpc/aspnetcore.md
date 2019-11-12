@@ -49,7 +49,7 @@ GRPC プロジェクトを作成する方法の詳細については、「 [grpc
 
 ## <a name="add-grpc-services-to-an-aspnet-core-app"></a>ASP.NET Core アプリに gRPC サービスを追加する
 
-gRPC には[AspNetCore](https://www.nuget.org/packages/Grpc.AspNetCore)パッケージが必要です。
+gRPC には[Grpc.AspNetCore](https://www.nuget.org/packages/Grpc.AspNetCore)パッケージが必要です。
 
 ### <a name="configure-grpc"></a>GRPC の構成
 
