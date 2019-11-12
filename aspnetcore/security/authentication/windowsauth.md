@@ -16,7 +16,7 @@ ms.locfileid: "67500507"
 ---
 # <a name="configure-windows-authentication-in-aspnet-core"></a>ASP.NET Core での Windows 認証を構成します。
 
-によって[Scott Addie](https://twitter.com/Scott_Addie)と[Luke Latham](https://github.com/guardrex)
+作成者: [Scott Addie](https://twitter.com/Scott_Addie)と[Luke Latham](https://github.com/guardrex)
 
 ::: moniker range=">= aspnetcore-3.0"
 
