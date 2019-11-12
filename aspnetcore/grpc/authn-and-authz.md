@@ -15,7 +15,7 @@ ms.locfileid: "71999862"
 ---
 # <a name="authentication-and-authorization-in-grpc-for-aspnet-core"></a>GRPC での認証と承認 (ASP.NET Core)
 
-[James のニュートン-キング](https://twitter.com/jamesnk)別
+[James Newton-King](https://twitter.com/jamesnk)別
 
 [サンプルコードを表示またはダウンロード](https://github.com/aspnet/AspNetCore.Docs/tree/master/aspnetcore/grpc/authn-and-authz/sample/)[する (ダウンロードする方法)](xref:index#how-to-download-a-sample)
 
