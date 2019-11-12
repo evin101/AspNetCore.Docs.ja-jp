@@ -16,7 +16,7 @@ ms.locfileid: "70384759"
 ---
 # <a name="share-authentication-cookies-among-aspnet-apps"></a>ASP.NET アプリ間で認証 cookie を共有する
 
-By [Rick Anderson](https://twitter.com/RickAndMSFT)と[Luke latham](https://github.com/guardrex)
+作成者: [Rick Anderson](https://twitter.com/RickAndMSFT)と[Luke Latham](https://github.com/guardrex)
 
 多くの場合、web サイトは、連携して動作する個々の web アプリで構成されます。 シングルサインオン (SSO) エクスペリエンスを提供するには、サイト内の web アプリで認証 cookie を共有する必要があります。 このシナリオをサポートするために、データ保護スタックは、Katana cookie 認証とクッキー認証チケットの ASP.NET Core 共有を許可します。
 
