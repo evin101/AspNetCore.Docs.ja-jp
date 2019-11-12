@@ -24,7 +24,7 @@ ASP.NET Core SignalR .NET クライアントライブラリを使用すると、
 
 ## <a name="install-the-signalr-net-client-package"></a>SignalR .NET クライアントパッケージをインストールする
 
-.NET クライアントが SignalR hub に接続するには、 [SignalR](https://www.nuget.org/packages/Microsoft.AspNetCore.SignalR.Client)パッケージが必要です。
+.NET クライアントが SignalR hub に接続するには、 [Microsoft.AspNetCore.SignalR.Client](https://www.nuget.org/packages/Microsoft.AspNetCore.SignalR.Client)パッケージが必要です。
 
 # <a name="visual-studiotabvisual-studio"></a>[Visual Studio](#tab/visual-studio)
 
