@@ -84,7 +84,7 @@ ASP.NET Core の統合テストには、次のものが必要です。
 
 通常、テスト web ホストは、テストの実行のためにアプリの通常の web ホストとは異なる方法で構成されます。 たとえば、テストには別のデータベースまたは異なるアプリ設定が使用される場合があります。
 
-テスト web ホストやメモリ内テストサーバー ([testserver](/dotnet/api/microsoft.aspnetcore.testhost.testserver)) などのインフラストラクチャコンポーネントは、 [AspNetCore](https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.Testing)パッケージによって提供または管理されます。 このパッケージを使用すると、テストの作成と実行を効率化できます。
+テスト web ホストやメモリ内テストサーバー ([testserver](/dotnet/api/microsoft.aspnetcore.testhost.testserver)) などのインフラストラクチャコンポーネントは、 [Microsoft.AspNetCore.Mvc.Testing](https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.Testing)パッケージによって提供または管理されます。 このパッケージを使用すると、テストの作成と実行を効率化できます。
 
 `Microsoft.AspNetCore.Mvc.Testing` パッケージは、次のタスクを処理します。
 
@@ -103,13 +103,13 @@ Razor Pages アプリと MVC アプリのテストの構成には、ほぼ違い
 
 テストプロジェクトは次の条件を持つ必要があります。
 
-* [AspNetCore](https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.Testing)パッケージを参照します。
+* [Microsoft.AspNetCore.Mvc.Testing](https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.Testing)パッケージを参照します。
 * プロジェクトファイルで Web SDK を指定します (`<Project Sdk="Microsoft.NET.Sdk.Web">`)。
 
 これらの前提条件は、[サンプルアプリ](https://github.com/aspnet/AspNetCore.Docs/tree/master/aspnetcore/test/integration-tests/samples/)で見ることができます。 *テスト/RazorPagesProject/RazorPagesProject*ファイルを調べます。 サンプルアプリでは、 [Xunit](https://xunit.github.io/)テストフレームワークと[AngleSharp](https://anglesharp.github.io/) parser ライブラリを使用しています。このため、サンプルアプリでも参照できます。
 
 * [xunit](https://www.nuget.org/packages/xunit)
-* [xunit](https://www.nuget.org/packages/xunit.runner.visualstudio)
+* [xunit.runner.visualstudio](https://www.nuget.org/packages/xunit.runner.visualstudio)
 * [AngleSharp](https://www.nuget.org/packages/AngleSharp)
 
 テストでも Entity Framework Core が使用されます。 アプリの参照:
@@ -381,7 +381,7 @@ SUT は、次の特性を持つ Razor Pages メッセージシステムです。
 | *テストの統合* | カスタム `WebApplicationFactory` クラスを使用したインデックスページの統合テストが含まれています。 |
 | *ヘルパー/ユーティリティ* | <ul><li>*Utilities.cs*には、テストデータを使用してデータベースをシード処理するために使用される `InitializeDbForTests` メソッドが含まれています。</li><li>*HtmlHelpers.cs*は、テストメソッドで使用するために AngleSharp `IHtmlDocument` を返すメソッドを提供します。</li><li>*HttpClientExtensions.cs*は、`SendAsync` のオーバーロードを使用して、SUT に要求を送信します。</li></ul> |
 
-テストフレームワークは[Xunit](https://xunit.github.io/)です。 統合テストは、 [Testserver](/dotnet/api/microsoft.aspnetcore.testhost.testserver)を含む[AspNetCore](/dotnet/api/microsoft.aspnetcore.testhost)を使用して実行されます。 [AspNetCore](https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.Testing)パッケージはテストホストとテストサーバーを構成するために使用されるため、`TestHost` および `TestServer` パッケージはテストアプリのプロジェクトファイルまたはテストの開発者構成で直接パッケージ参照を必要としません。アプリケーション.
+テストフレームワークは[Xunit](https://xunit.github.io/)です。 統合テストは、 [Testserver](/dotnet/api/microsoft.aspnetcore.testhost.testserver)を含む[AspNetCore](/dotnet/api/microsoft.aspnetcore.testhost)を使用して実行されます。 [Microsoft.AspNetCore.Mvc.Testing](https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.Testing)パッケージはテストホストとテストサーバーを構成するために使用されるため、`TestHost` および `TestServer` パッケージはテストアプリのプロジェクトファイルまたはテストの開発者構成で直接パッケージ参照を必要としません。アプリケーション.
 
 **テスト用のデータベースのシード処理**
 
@@ -461,7 +461,7 @@ ASP.NET Core の統合テストには、次のものが必要です。
 
 通常、テスト web ホストは、テストの実行のためにアプリの通常の web ホストとは異なる方法で構成されます。 たとえば、テストには別のデータベースまたは異なるアプリ設定が使用される場合があります。
 
-テスト web ホストやメモリ内テストサーバー ([testserver](/dotnet/api/microsoft.aspnetcore.testhost.testserver)) などのインフラストラクチャコンポーネントは、 [AspNetCore](https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.Testing)パッケージによって提供または管理されます。 このパッケージを使用すると、テストの作成と実行を効率化できます。
+テスト web ホストやメモリ内テストサーバー ([testserver](/dotnet/api/microsoft.aspnetcore.testhost.testserver)) などのインフラストラクチャコンポーネントは、 [Microsoft.AspNetCore.Mvc.Testing](https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.Testing)パッケージによって提供または管理されます。 このパッケージを使用すると、テストの作成と実行を効率化できます。
 
 `Microsoft.AspNetCore.Mvc.Testing` パッケージは、次のタスクを処理します。
 
@@ -488,7 +488,7 @@ Razor Pages アプリと MVC アプリのテストの構成には、ほぼ違い
 これらの前提条件は、[サンプルアプリ](https://github.com/aspnet/AspNetCore.Docs/tree/master/aspnetcore/test/integration-tests/samples/)で見ることができます。 *テスト/RazorPagesProject/RazorPagesProject*ファイルを調べます。 サンプルアプリでは、 [Xunit](https://xunit.github.io/)テストフレームワークと[AngleSharp](https://anglesharp.github.io/) parser ライブラリを使用しています。このため、サンプルアプリでも参照できます。
 
 * [xunit](https://www.nuget.org/packages/xunit/)
-* [xunit](https://www.nuget.org/packages/xunit.runner.visualstudio/)
+* [xunit.runner.visualstudio](https://www.nuget.org/packages/xunit.runner.visualstudio/)
 * [AngleSharp](https://www.nuget.org/packages/AngleSharp/)
 
 ## <a name="sut-environment"></a>SUT 環境
@@ -745,7 +745,7 @@ SUT は、次の特性を持つ Razor Pages メッセージシステムです。
 | *テストの統合* | カスタム `WebApplicationFactory` クラスを使用したインデックスページの統合テストが含まれています。 |
 | *ヘルパー/ユーティリティ* | <ul><li>*Utilities.cs*には、テストデータを使用してデータベースをシード処理するために使用される `InitializeDbForTests` メソッドが含まれています。</li><li>*HtmlHelpers.cs*は、テストメソッドで使用するために AngleSharp `IHtmlDocument` を返すメソッドを提供します。</li><li>*HttpClientExtensions.cs*は、`SendAsync` のオーバーロードを使用して、SUT に要求を送信します。</li></ul> |
 
-テストフレームワークは[Xunit](https://xunit.github.io/)です。 統合テストは、 [Testserver](/dotnet/api/microsoft.aspnetcore.testhost.testserver)を含む[AspNetCore](/dotnet/api/microsoft.aspnetcore.testhost)を使用して実行されます。 [AspNetCore](https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.Testing)パッケージはテストホストとテストサーバーを構成するために使用されるため、`TestHost` および `TestServer` パッケージはテストアプリのプロジェクトファイルまたはテストの開発者構成で直接パッケージ参照を必要としません。アプリケーション.
+テストフレームワークは[Xunit](https://xunit.github.io/)です。 統合テストは、 [Testserver](/dotnet/api/microsoft.aspnetcore.testhost.testserver)を含む[AspNetCore](/dotnet/api/microsoft.aspnetcore.testhost)を使用して実行されます。 [Microsoft.AspNetCore.Mvc.Testing](https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.Testing)パッケージはテストホストとテストサーバーを構成するために使用されるため、`TestHost` および `TestServer` パッケージはテストアプリのプロジェクトファイルまたはテストの開発者構成で直接パッケージ参照を必要としません。アプリケーション.
 
 **テスト用のデータベースのシード処理**
 
