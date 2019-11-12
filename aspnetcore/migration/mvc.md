@@ -14,7 +14,7 @@ ms.locfileid: "68371876"
 ---
 # <a name="migrate-from-aspnet-mvc-to-aspnet-core-mvc"></a>ASP.NET MVC から ASP.NET Core MVC への移行
 
-[Rick Anderson](https://twitter.com/RickAndMSFT)、 [Daniel Roth](https://github.com/danroth27)、[Steve Smith](https://ardalis.com/)、 [Scott Addie](https://scottaddie.com)
+作成者: [Rick Anderson](https://twitter.com/RickAndMSFT)、 [Daniel Roth](https://github.com/danroth27)、[Steve Smith](https://ardalis.com/)、 [Scott Addie](https://scottaddie.com)
 
 この記事では、ASP.NET MVC プロジェクトの[ASP.NET CORE mvc](../mvc/overview.md)への移行を開始する方法について説明します。 このプロセスでは、ASP.NET MVC から変更されたものの多くを強調表示します。 ASP.NET MVC からの移行は、複数の手順から構成されるプロセスです。この記事では、初期セットアップ、基本的なコントローラーとビュー、静的コンテンツ、およびクライアント側の依存関係について説明します。 その他の記事では、多くの ASP.NET MVC プロジェクトで検出された構成と id コードの移行について説明します。
 
