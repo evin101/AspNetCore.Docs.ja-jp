@@ -16,7 +16,7 @@ ms.locfileid: "71248388"
 ---
 # <a name="two-factor-authentication-with-sms-in-aspnet-core"></a>ASP.NET Core での SMS で 2 要素認証
 
-によって[Rick Anderson](https://twitter.com/RickAndMSFT)と[Swiss 開発者](https://github.com/Swiss-Devs)
+作成者: [Rick Anderson](https://twitter.com/RickAndMSFT)と[Swiss-Devs](https://github.com/Swiss-Devs)
 
 >[!WARNING]
 > 時間ベース ワンタイム パスワード アルゴリズム (TOTP) を使用して 2 要素認証 (2 fa) authenticator アプリは、業界の 2 fa のアプローチをお勧めします。 2 fa を SMS 2 fa を TOTP を使用しています。 詳細については、次を参照してください。 [TOTP 認証アプリが ASP.NET Core での QR コードを有効にする生成](xref:security/authentication/identity-enable-qrcodes)ASP.NET Core 2.0 以降。
