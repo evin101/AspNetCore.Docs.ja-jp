@@ -21,7 +21,7 @@ ms.locfileid: "73143456"
 
 ## <a name="create-a-google-api-console-project-and-client-id"></a>Google API コンソールプロジェクトとクライアント ID を作成する
 
-* [AspNetCore](https://www.nuget.org/packages/Microsoft.AspNetCore.Authentication.Google)をインストールします。
+* [Microsoft.AspNetCore.Authentication.Google](https://www.nuget.org/packages/Microsoft.AspNetCore.Authentication.Google)をインストールします。
 * [「Google サインインを web アプリに統合](https://developers.google.com/identity/sign-in/web/devconsole-project)する」に移動し、 **[プロジェクトの構成]** を選択します。
 * **[OAuth クライアントの構成]** ダイアログで、 **[Web サーバー]** を選択します。
 * [承認された**リダイレクト uri**のテキスト入力] ボックスで、リダイレクト uri を設定します。 たとえば、`https://localhost:44312/signin-google`
