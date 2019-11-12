@@ -80,7 +80,7 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 
 ::: moniker range=">= aspnetcore-2.2"
 
-CORS で提供される保護は、WebSocket には適用されません。 Websocket の配信元の制限については、「 [websocket の配信元の制限](xref:fundamentals/websockets#websocket-origin-restriction)」を参照してください。
+CORS で提供される保護は、WebSocket には適用されません。 WebSocket の配信元の制限については、「 [websocket の配信元の制限](xref:fundamentals/websockets#websocket-origin-restriction)」を参照してください。
 
 ::: moniker-end
 
@@ -104,7 +104,7 @@ ASP.NET Core 2.1 以降では、前`Configure`  **`UseSignalR`** に配置した
 
 ## <a name="access-token-logging"></a>アクセストークンのログ記録
 
-Websocket またはサーバー送信イベントを使用する場合、ブラウザークライアントはクエリ文字列にアクセストークンを送信します。 一般に、クエリ文字列を使用してアクセストークンを受け取ることは`Authorization` 、標準ヘッダーを使用する場合と同じようにセキュリティで保護されます。 クライアントとサーバー間のセキュリティで保護されたエンドツーエンド接続を確保するには、常に HTTPS を使用する必要があります。 多くの web サーバーでは、クエリ文字列を含め、各要求の URL がログに記録されます。 Url をログに記録すると、アクセストークンがログに記録される場合があります。 では、各要求の URL が既定でログに記録されます。これには、クエリ文字列が含まれます。 ASP.NET Core 例:
+WebSocket または Server-Sent Events を使用する場合、ブラウザークライアントはクエリ文字列にアクセストークンを送信します。 一般に、クエリ文字列を使用してアクセストークンを受け取ることは`Authorization` 、標準ヘッダーを使用する場合と同じようにセキュリティで保護されます。 クライアントとサーバー間のセキュリティで保護されたエンドツーエンド接続を確保するには、常に HTTPS を使用する必要があります。 多くの web サーバーでは、クエリ文字列を含め、各要求の URL がログに記録されます。 Url をログに記録すると、アクセストークンがログに記録される場合があります。 では、各要求の URL が既定でログに記録されます。これには、クエリ文字列が含まれます。 ASP.NET Core 例:
 
 ```
 info: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
