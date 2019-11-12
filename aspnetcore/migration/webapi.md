@@ -15,7 +15,7 @@ ms.locfileid: "67555743"
 ---
 # <a name="migrate-from-aspnet-web-api-to-aspnet-core"></a>ASP.NET Web API から ASP.NET Core に移行します。
 
-によって[Scott Addie](https://twitter.com/scott_addie)と[Steve Smith](https://ardalis.com/)
+作成者: [Scott Addie](https://twitter.com/scott_addie)と[Steve Smith](https://ardalis.com/)
 
 ASP.NET 4.x Web API は、クライアント、ブラウザーやモバイル デバイスなどの広範な範囲に到達する HTTP サービスです。 ASP.NET Core は ASP.NET 4.x の MVC を統一し、Web API アプリを ASP.NET Core MVC と呼ばれる単純なプログラミング モデルにモデル化します。 この記事では、ASP.NET 4.x Web API から ASP.NET Core MVC への移行に必要な手順を示します。
 
