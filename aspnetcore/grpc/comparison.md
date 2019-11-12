@@ -15,7 +15,7 @@ ms.locfileid: "72589976"
 ---
 # <a name="compare-grpc-services-with-http-apis"></a>HTTP API を使用した gRPC サービスの比較
 
-[James のニュートン-キング](https://twitter.com/jamesnk)別
+[James Newton-King](https://twitter.com/jamesnk)別
 
 この記事では、 [Grpc サービス](https://grpc.io/docs/guides/)と HTTP api (ASP.NET Core [web api](xref:web-api/index)を含む) の比較について説明します。 アプリの API を提供するために使用されるテクノロジは重要な選択であり、gRPC は HTTP Api と比較して独自の利点を提供します。 この記事では、gRPC の長所と短所について説明し、他のテクノロジで gRPC を使用する場合のシナリオを推奨します。
 
