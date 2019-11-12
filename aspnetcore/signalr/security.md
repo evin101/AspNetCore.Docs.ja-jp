@@ -16,7 +16,7 @@ ms.locfileid: "70746557"
 ---
 # <a name="security-considerations-in-aspnet-core-signalr"></a>ASP.NET Core SignalR のセキュリティに関する考慮事項
 
-By [Andrew Stanton-看護師](https://twitter.com/anurse)
+作成者: [Andrew Stanton-Nurse](https://twitter.com/anurse)
 
 この記事では、SignalR のセキュリティ保護について説明します。
 
