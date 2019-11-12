@@ -16,7 +16,7 @@ ms.locfileid: "71186929"
 ---
 # <a name="use-streaming-in-aspnet-core-signalr"></a>ASP.NET Core SignalR でストリーミングを使用する
 
-[Brennan Conroy](https://github.com/BrennanConroy)
+作成者: [Brennan Conroy](https://github.com/BrennanConroy)
 
 ::: moniker range=">= aspnetcore-3.0"
 
