@@ -148,7 +148,7 @@ Facebook の資格情報を使用してログインしました。
 
 ## <a name="next-steps"></a>次の手順
 
-* Facebook の高度な認証シナリオ用に、 [AspNetCore](https://www.nuget.org/packages/Microsoft.AspNetCore.Authentication.Facebook) NuGet パッケージをプロジェクトに追加します。 このパッケージは、Facebook 外部ログイン機能をアプリに統合するためには必要ありません。 
+* Facebook の高度な認証シナリオ用に、 [Microsoft.AspNetCore.Authentication.Facebook](https://www.nuget.org/packages/Microsoft.AspNetCore.Authentication.Facebook) NuGet パッケージをプロジェクトに追加します。 このパッケージは、Facebook 外部ログイン機能をアプリに統合するためには必要ありません。 
 
 * この記事では、Facebook を認証する方法を示しました。 記載されているその他のプロバイダーで認証する同様のアプローチを利用できる、[前のページ](xref:security/authentication/social/index)します。
 
