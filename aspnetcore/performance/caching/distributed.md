@@ -16,7 +16,7 @@ ms.locfileid: "71081547"
 ---
 # <a name="distributed-caching-in-aspnet-core"></a>ASP.NET Core での分散キャッシュ
 
-[Luke Latham](https://github.com/guardrex)と[上田 Smith](https://ardalis.com/)
+[Luke Latham](https://github.com/guardrex)と[Steve Smith](https://ardalis.com/)
 
 分散キャッシュは、複数のアプリサーバーによって共有されるキャッシュであり、通常、それにアクセスするアプリサーバーに外部サービスとして保持されます。 分散キャッシュを使用すると、特にアプリがクラウドサービスまたはサーバーファームでホストされている場合に、ASP.NET Core アプリのパフォーマンスとスケーラビリティを向上させることができます。
 
