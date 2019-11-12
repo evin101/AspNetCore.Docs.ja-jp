@@ -16,7 +16,7 @@ ms.locfileid: "73034326"
 ---
 # <a name="azure-key-vault-configuration-provider-in-aspnet-core"></a>ASP.NET Core の構成プロバイダーの Azure Key Vault
 
-[Luke Latham](https://github.com/guardrex)および[Andrew Stanton-看護師](https://github.com/anurse)
+[Luke Latham](https://github.com/guardrex)および[Andrew Stanton-Nurse](https://github.com/anurse)
 
 このドキュメントでは、 [Microsoft Azure Key Vault](https://azure.microsoft.com/services/key-vault/)構成プロバイダーを使用して Azure Key Vault シークレットからアプリ構成値を読み込む方法について説明します。 Azure Key Vault は、アプリとサービスで使用される暗号化キーとシークレットを保護するのに役立つクラウドベースのサービスです。 ASP.NET Core アプリで Azure Key Vault を使用する一般的なシナリオは次のとおりです。
 
