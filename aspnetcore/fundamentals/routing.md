@@ -16,7 +16,7 @@ ms.locfileid: "73416133"
 ---
 # <a name="routing-in-aspnet-core"></a>ASP.NET Core のルーティング
 
-[Ryan Nowak](https://github.com/rynowak)、[Steve Smith](https://ardalis.com/)、[Rick Anderson](https://twitter.com/RickAndMSFT) 作
+作成者: [Ryan Nowak](https://github.com/rynowak)、[Steve Smith](https://ardalis.com/)、[Rick Anderson](https://twitter.com/RickAndMSFT)
 
 ::: moniker range=">= aspnetcore-3.0"
 
