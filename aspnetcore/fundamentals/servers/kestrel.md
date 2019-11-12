@@ -25,7 +25,7 @@ Kestrel は、[ASP.NET Core 向けのクロスプラットフォーム Web サ�
 Kestrel では、次のシナリオがサポートされます。
 
 * HTTPS
-* [Websocket](https://github.com/aspnet/websockets) を有効にするために使用される非透過的なアップグレード
+* [WebSocket](https://github.com/aspnet/websockets) を有効にするために使用される非透過的なアップグレード
 * Nginx の背後にある高パフォーマンスの UNIX ソケット
 * HTTP/2 (macOS の場合を除く&dagger;)
 
@@ -955,7 +955,7 @@ Kestrel は、[ASP.NET Core 向けのクロスプラットフォーム Web サ�
 Kestrel では、次のシナリオがサポートされます。
 
 * HTTPS
-* [Websocket](https://github.com/aspnet/websockets) を有効にするために使用される非透過的なアップグレード
+* [WebSocket](https://github.com/aspnet/websockets) を有効にするために使用される非透過的なアップグレード
 * Nginx の背後にある高パフォーマンスの UNIX ソケット
 * HTTP/2 (macOS の場合を除く&dagger;)
 
@@ -1881,7 +1881,7 @@ Kestrel は、[ASP.NET Core 向けのクロスプラットフォーム Web サ�
 Kestrel では、次のシナリオがサポートされます。
 
 * HTTPS
-* [Websocket](https://github.com/aspnet/websockets) を有効にするために使用される非透過的なアップグレード
+* [WebSocket](https://github.com/aspnet/websockets) を有効にするために使用される非透過的なアップグレード
 * Nginx の背後にある高パフォーマンスの UNIX ソケット
 
 kestrel は、.NET Core がサポートするすべてのプラットフォームおよびバージョンでサポートされます。
