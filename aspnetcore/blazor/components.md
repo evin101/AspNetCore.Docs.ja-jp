@@ -16,7 +16,7 @@ ms.locfileid: "73033977"
 ---
 # <a name="create-and-use-aspnet-core-razor-components"></a>ASP.NET Core Razor コンポーネントを作成して使用する
 
-[Luke Latham](https://github.com/guardrex)および[Daniel Roth](https://github.com/danroth27)
+作成者: [Luke Latham](https://github.com/guardrex)および[Daniel Roth](https://github.com/danroth27)
 
 [サンプル コードを表示またはダウンロード](https://github.com/aspnet/AspNetCore.Docs/tree/master/aspnetcore/blazor/common/samples/)します ([ダウンロード方法](xref:index#how-to-download-a-sample))。
 
