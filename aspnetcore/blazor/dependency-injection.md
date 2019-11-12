@@ -16,7 +16,7 @@ ms.locfileid: "72391137"
 ---
 # <a name="aspnet-core-blazor-dependency-injection"></a>ASP.NET Core Blazor の依存関係の挿入
 
-[Rainer Stropek](https://www.timecockpit.com)
+作成者: [Rainer Stropek](https://www.timecockpit.com)
 
 [!INCLUDE[](~/includes/blazorwasm-preview-notice.md)]
 
