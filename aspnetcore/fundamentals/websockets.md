@@ -1,7 +1,7 @@
 ---
-title: ASP.NET Core での Websocket のサポート
+title: ASP.NET Core での WebSocket のサポート
 author: rick-anderson
-description: ASP.NET Core で Websocket の使用を開始する方法を説明します。
+description: ASP.NET Core で WebSocket の使用を開始する方法を説明します。
 monikerRange: '>= aspnetcore-1.1'
 ms.author: riande
 ms.custom: mvc
@@ -14,11 +14,11 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/18/2019
 ms.locfileid: "72589703"
 ---
-# <a name="websockets-support-in-aspnet-core"></a>ASP.NET Core での Websocket のサポート
+# <a name="websockets-support-in-aspnet-core"></a>ASP.NET Core での WebSocket のサポート
 
 作成者: [Tom Dykstra](https://github.com/tdykstra) および [Andrew Stanton-Nurse](https://github.com/anurse)
 
-この記事では、ASP.NET Core で Websocket の使用を開始する方法について説明します。 [WebSocket](https://wikipedia.org/wiki/WebSocket) ([RFC 6455](https://tools.ietf.org/html/rfc6455)) は、TCP 接続を使用した双方向の永続的通信チャネルを有効にするプロトコルです。 このプロトコルは、チャット、ダッシュボード、ゲーム アプリなど、高速かつリアルタイムのコミュニケーションを活用するアプリで使用されます。
+この記事では、ASP.NET Core で WebSocket の使用を開始する方法について説明します。 [WebSocket](https://wikipedia.org/wiki/WebSocket) ([RFC 6455](https://tools.ietf.org/html/rfc6455)) は、TCP 接続を使用した双方向の永続的通信チャネルを有効にするプロトコルです。 このプロトコルは、チャット、ダッシュボード、ゲーム アプリなど、高速かつリアルタイムのコミュニケーションを活用するアプリで使用されます。
 
 [サンプル コードを表示またはダウンロード](https://github.com/aspnet/AspNetCore.Docs/tree/master/aspnetcore/fundamentals/websockets/samples)します ([ダウンロード方法](xref:index#how-to-download-a-sample))。 [実行方法](#sample-app)。
 
@@ -60,7 +60,7 @@ ms.locfileid: "72589703"
 ## <a name="configure-the-middleware"></a>ミドルウェアの構成
 
 
-`Startup` クラスの `Configure` メソッドに、Websocket ミドルウェアを追加します。
+`Startup` クラスの `Configure` メソッドに、WebSocket ミドルウェアを追加します。
 
 [!code-csharp[](websockets/samples/2.x/WebSocketsSample/Startup.cs?name=UseWebSockets)]
 
