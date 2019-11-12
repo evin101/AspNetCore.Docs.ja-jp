@@ -52,7 +52,7 @@ ms.locfileid: "73611457"
 
 ::: moniker range="< aspnetcore-3.0"
 
-[AspNetCore メタパッケージ](xref:fundamentals/metapackage-app)を使用するか、 [AspNetCore](https://www.nuget.org/packages/Microsoft.AspNetCore.ResponseCaching/)パッケージへのパッケージ参照を追加します。
+[AspNetCore メタパッケージ](xref:fundamentals/metapackage-app)を使用するか、 [Microsoft.AspNetCore.ResponseCaching](https://www.nuget.org/packages/Microsoft.AspNetCore.ResponseCaching/)パッケージへのパッケージ参照を追加します。
 
 `Startup.ConfigureServices`で、応答キャッシュミドルウェアをサービスコレクションに追加します。
 
