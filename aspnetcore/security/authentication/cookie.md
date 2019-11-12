@@ -15,7 +15,7 @@ ms.locfileid: "73462931"
 ---
 # <a name="use-cookie-authentication-without-aspnet-core-identity"></a>ASP.NET Core Id を指定せずに cookie 認証を使用する
 
-By [Rick Anderson](https://twitter.com/RickAndMSFT)と[Luke latham](https://github.com/guardrex)
+作成者: [Rick Anderson](https://twitter.com/RickAndMSFT)と[Luke Latham](https://github.com/guardrex)
 
 ::: moniker range=">= aspnetcore-3.0"
 
