@@ -28,7 +28,7 @@ SignalR では、特定の接続に対するすべての HTTP 要求を同じサ
 
 1. 単一のサーバーでホストする場合、1つのプロセスで実行します。
 1. Azure SignalR サービスを使用する場合。
-1. すべてのクライアントが Websocket**のみ**を使用するように構成され、 [skipnegotiation 設定](xref:signalr/configuration#configure-additional-options)がクライアント構成で有効に**なっている**場合。
+1. すべてのクライアントが WebSocket**のみ**を使用するように構成され、 [skipnegotiation 設定](xref:signalr/configuration#configure-additional-options)がクライアント構成で有効に**なっている**場合。
 
 その他のすべての状況 (Redis バックプレーンを使用する場合を含む) では、サーバー環境を固定セッション用に構成する必要があります。
 
