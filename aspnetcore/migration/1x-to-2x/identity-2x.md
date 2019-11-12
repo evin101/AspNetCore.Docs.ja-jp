@@ -14,7 +14,7 @@ ms.locfileid: "67313744"
 ---
 # <a name="migrate-authentication-and-identity-to-aspnet-core-20"></a>ASP.NET Core 2.0 への認証と Id を移行します。
 
-によって[Scott Addie](https://github.com/scottaddie)と[Hao 力](https://github.com/HaoK)
+作成者: [Scott Addie](https://github.com/scottaddie)と[Hao Kung](https://github.com/HaoK)
 
 ASP.NET Core 2.0 が認証用の新しいモデルおよび[Identity](xref:security/authentication/identity)サービスを使用して構成を簡略化します。 認証または Id を使用する ASP.NET Core 1.x アプリケーションは、以下に示すとおり、新しいモデルを使用して更新できます。
 
