@@ -16,7 +16,7 @@ ms.locfileid: "71999778"
 ---
 # <a name="aspnet-core-razor-components-class-libraries"></a>Razor コンポーネントクラスライブラリの ASP.NET Core
 
-[Simon Timms](https://github.com/stimms)
+作成者: [Simon Timms](https://github.com/stimms)
 
 コンポーネントは、プロジェクト間で[Razor クラスライブラリ (RCL)](xref:razor-pages/ui-class)で共有できます。 *Razor コンポーネントクラスライブラリ*は、次のものからインクルードできます。
 
