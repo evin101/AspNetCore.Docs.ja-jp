@@ -16,7 +16,7 @@ ms.locfileid: "72391183"
 ---
 # <a name="debug-aspnet-core-blazor"></a>デバッグ ASP.NET Core Blazor
 
-[Daniel Roth](https://github.com/danroth27)
+作成者: [Daniel Roth](https://github.com/danroth27)
 
 [!INCLUDE[](~/includes/blazorwasm-preview-notice.md)]
 
