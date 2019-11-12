@@ -125,7 +125,7 @@ GRPC クライアントは、TLS を使用しないように構成する必要�
 具象クライアントとサービス基底クラスの gRPC コード生成には、protobuf ファイルとツールをプロジェクトから参照する必要があります。 次のものを含める必要があります。
 
 * `<Protobuf>` 項目グループで使用する*プロトコルファイル。* [インポートさ*れたプロトコル*ファイル](https://developers.google.com/protocol-buffers/docs/proto3#importing-definitions)は、プロジェクトによって参照される必要があります。
-* GRPC ツールパッケージ[grpc](https://www.nuget.org/packages/Grpc.Tools/)に対するパッケージリファレンス。
+* GRPC ツールパッケージ[Grpc.Tools](https://www.nuget.org/packages/Grpc.Tools/)に対するパッケージリファレンス。
 
 GRPC C#アセットの生成の詳細については、<xref:grpc/basics> を参照してください。
 
