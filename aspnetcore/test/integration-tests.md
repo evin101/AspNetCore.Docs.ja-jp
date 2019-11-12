@@ -16,7 +16,7 @@ ms.locfileid: "73143363"
 ---
 # <a name="integration-tests-in-aspnet-core"></a>ASP.NET Core での統合テスト
 
-[Luke Latham](https://github.com/guardrex)、 [Javier Calvarro Jeannine](https://github.com/javiercn)、[上田 Smith](https://ardalis.com/)、 [Jos van der Til](https://jvandertil.nl)
+[Luke Latham](https://github.com/guardrex)、 [Javier Calvarro Nelson](https://github.com/javiercn)、[Steve Smith](https://ardalis.com/)、 [Jos van der Til](https://jvandertil.nl)
 
 ::: moniker range=">= aspnetcore-3.0"
 
