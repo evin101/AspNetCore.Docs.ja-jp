@@ -16,7 +16,7 @@ ms.locfileid: "71080508"
 ---
 # <a name="use-javascript-services-to-create-single-page-applications-in-aspnet-core"></a>JavaScript サービスを使用して ASP.NET Core にシングルページアプリケーションを作成する
 
-によって[Scott Addie](https://github.com/scottaddie)と[Fiyaz Hasan](https://fiyazhasan.me/)
+作成者: [Scott Addie](https://github.com/scottaddie)と[Fiyaz Hasan](https://fiyazhasan.me/)
 
 シングル ページ アプリケーション (SPA) は、その固有の機能豊富なユーザー エクスペリエンスのための web アプリケーションの人気のある型です。 クライアント側の SPA フレームワークまたはライブラリ ([角度](https://angular.io/)や[反応](https://facebook.github.io/react/)など) をサーバー側のフレームワーク (ASP.NET Core など) と統合することは困難な場合があります。 JavaScript サービスは、統合プロセスの摩擦を減らすために開発されました。 これにより、別のクライアントおよびサーバー テクノロジ スタックとの間のシームレスな操作ができます。
 
