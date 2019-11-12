@@ -16,7 +16,7 @@ ms.locfileid: "71081531"
 ---
 # <a name="troubleshoot-aspnet-core-on-azure-app-service-and-iis"></a>Azure App Service および IIS での ASP.NET Core のトラブルシューティング
 
-[Luke Latham](https://github.com/guardrex)と[Justin Kotk k](https://github.com/jkotalik)
+作成者: [Luke Latham](https://github.com/guardrex)と[Justin Kotk k](https://github.com/jkotalik)
 
 この記事では、アプリの起動時に発生する一般的なエラーと、アプリが Azure App Service または IIS に展開されたときのエラーを診断する手順について説明します。
 
