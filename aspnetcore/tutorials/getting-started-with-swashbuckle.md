@@ -15,7 +15,7 @@ ms.locfileid: "71924979"
 ---
 # <a name="get-started-with-swashbuckle-and-aspnet-core"></a>Swashbuckle と ASP.NET Core の概要
 
-[Shayne Boyer](https://twitter.com/spboyer) および [Scott Addie](https://twitter.com/Scott_Addie) 著
+作成者: [Shayne Boyer](https://twitter.com/spboyer) および [Scott Addie](https://twitter.com/Scott_Addie)
 
 [サンプル コードを表示またはダウンロード](https://github.com/aspnet/AspNetCore.Docs/tree/master/aspnetcore/tutorials/web-api-help-pages-using-swagger/samples/)します ([ダウンロード方法](xref:index#how-to-download-a-sample))。
 
