@@ -16,7 +16,7 @@ ms.locfileid: "71211587"
 ---
 # <a name="aspnet-core-blazor-layouts"></a>Blazor レイアウトの ASP.NET Core
 
-By [Rainer Stropek](https://www.timecockpit.com)と[Luke latham](https://github.com/guardrex)
+作成者: [Rainer Stropek](https://www.timecockpit.com)と[Luke Latham](https://github.com/guardrex)
 
 メニュー、著作権メッセージ、会社のロゴなどの一部のアプリ要素は、通常、アプリの全体的なレイアウトの一部であり、アプリのすべてのコンポーネントで使用されます。 これらの要素のコードをアプリのすべてのコンポーネントにコピーすることは、要素&mdash;の1つが更新を必要とするたびに効率的な方法ではありません。すべてのコンポーネントを更新する必要があります。 このような重複を維持することは困難であり、時間の経過と共にコンテンツの一貫性が失われる可能性があります。 *レイアウト*はこの問題を解決します。
 
