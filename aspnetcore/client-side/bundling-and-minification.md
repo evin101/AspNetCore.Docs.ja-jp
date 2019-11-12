@@ -15,7 +15,7 @@ ms.locfileid: "71080559"
 ---
 # <a name="bundle-and-minify-static-assets-in-aspnet-core"></a>ASP.NET Core での静的資産のバンドルと縮小
 
-作成者: [Scott Addie](https://twitter.com/Scott_Addie)と[David 松](https://twitter.com/davidpine7)
+作成者: [Scott Addie](https://twitter.com/Scott_Addie)と[David Pine](https://twitter.com/davidpine7)
 
 この記事では、ASP.NET Core web アプリでこれらの機能を使用する方法など、バンドルと縮小を適用する利点について説明します。
 
