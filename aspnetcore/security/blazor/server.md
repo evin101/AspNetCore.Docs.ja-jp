@@ -296,7 +296,7 @@ ASP.NET Core アプリをセキュリティで保護するためのガイダン�
 
 ### <a name="protect-information-in-transit-with-https"></a>HTTPS を使用した転送中の情報の保護
 
-Blazor Server は、クライアントとサーバー間の通信に SignalR を使用します。 Blazor サーバーは通常、SignalR ネゴシエートを行うトランスポートを使用します。これは通常、Websocket です。
+Blazor Server は、クライアントとサーバー間の通信に SignalR を使用します。 Blazor サーバーは通常、SignalR ネゴシエートを行うトランスポートを使用します。これは通常、WebSocket です。
 
 Blazor Server は、サーバーとクライアントの間で送信されるデータの整合性と機密性を保証しません。 常に HTTPS を使用します。
 
