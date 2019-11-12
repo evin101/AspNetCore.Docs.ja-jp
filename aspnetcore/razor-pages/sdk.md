@@ -50,7 +50,7 @@ Razor SDK には、`Include` 属性が @no__t グロビングパターンに設�
 
 ::: moniker range=">= aspnetcore-3.0"
 
-Razor SDK を使用して Razor ビューまたは Razor Pages を含むクラスライブラリをビルドするには、Razor クラスライブラリ (RCL) プロジェクトテンプレートから始めることをお勧めします。 Blazor (*razor*) ファイルのビルドに使用される rcl では、 [AspNetCore](https://www.nuget.org/packages/Microsoft.AspNetCore.Components)パッケージへの参照が最低限必要です。 Razor ビューまたはページ (*cshtml*ファイル) をビルドするために使用される rcl では、`netcoreapp3.0` 以降を対象とする必要があります。また、プロジェクトファイルの[AspNetCore メタパッケージ](xref:fundamentals/metapackage-app)に @no__t が2つあります。
+Razor SDK を使用して Razor ビューまたは Razor Pages を含むクラスライブラリをビルドするには、Razor クラスライブラリ (RCL) プロジェクトテンプレートから始めることをお勧めします。 Blazor (*razor*) ファイルのビルドに使用される rcl では、 [Microsoft.AspNetCore.Components](https://www.nuget.org/packages/Microsoft.AspNetCore.Components)パッケージへの参照が最低限必要です。 Razor ビューまたはページ (*cshtml*ファイル) をビルドするために使用される rcl では、`netcoreapp3.0` 以降を対象とする必要があります。また、プロジェクトファイルの[AspNetCore メタパッケージ](xref:fundamentals/metapackage-app)に @no__t が2つあります。
 
 ::: moniker-end
 
@@ -99,7 +99,7 @@ Razor の SDK の動作は、プロジェクトをビルドする際に次のプ
 ::: moniker range=">= aspnetcore-3.0"
 
 > [!WARNING]
-> ASP.NET Core 3.0 以降では、プロジェクトファイル内の `RazorCompileOnBuild` または `RazorCompileOnPublish` の MSBuild プロパティが無効になっている場合、MVC ビューまたは Razor Pages は既定では提供されません。 アプリケーションがランタイムコンパイルに依存して[AspNetCore](https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation)ファイルを処理する場合は、RuntimeCompilation パッケージへの明示的な参照を追加する必要があります。
+> ASP.NET Core 3.0 以降では、プロジェクトファイル内の `RazorCompileOnBuild` または `RazorCompileOnPublish` の MSBuild プロパティが無効になっている場合、MVC ビューまたは Razor Pages は既定では提供されません。 アプリケーションがランタイムコンパイルに依存して[Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation](https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation)ファイルを処理する場合は、RuntimeCompilation パッケージへの明示的な参照を追加する必要があります。
 
 ::: moniker-end
 
