@@ -183,7 +183,7 @@ Copyright (C) Microsoft Corporation. All rights reserved.
 
 ## <a name="ad-hoc-execution-of-bundling-and-minification"></a>バンドルと縮小のアドホック実行
 
-プロジェクトをビルドしなくても、バンドルタスクと縮小タスクをアドホックベースで実行できます。 [BundlerMinifier](https://www.nuget.org/packages/BundlerMinifier.Core/) NuGet パッケージをプロジェクトに追加します。
+プロジェクトをビルドしなくても、バンドルタスクと縮小タスクをアドホックベースで実行できます。 [BundlerMinifier.Core](https://www.nuget.org/packages/BundlerMinifier.Core/) NuGet パッケージをプロジェクトに追加します。
 
 [!code-xml[](../client-side/bundling-and-minification/samples/BuildBundlerMinifierApp/BuildBundlerMinifierApp.csproj?range=10)]
 
