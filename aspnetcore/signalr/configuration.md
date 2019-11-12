@@ -214,8 +214,8 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 | `AuthorizationData` | ハブクラスに適用された @no__t 0 属性から自動的に収集されるデータ。 | クライアントがハブへの接続を承認されているかどうかを判断するために使用される[Iauthorizedata](/dotnet/api/microsoft.aspnetcore.authorization.iauthorizedata)オブジェクトの一覧。 |
 | `TransportMaxBufferSize` | 32 KB | サーバーがバック圧力を観察する前に、アプリによって送信された最大バイト数。 この値を大きくすると、バック圧力を待機することなく、より大きなメッセージをサーバーでバッファーできるようになりますが、メモリの消費量が増加する可能性があります。 |
 | `Transports` | すべてのトランスポートが有効になります。 | クライアントが接続に使用できるトランスポートを制限できる @no__t 0 の値を列挙したビットフラグ。 |
-| `LongPolling` | 下記を参照。 | 長いポーリングトランスポートに固有の追加オプション。 |
-| `WebSockets` | 下記を参照。 | Websocket トランスポートに固有の追加オプション。 |
+| `LongPolling` | 下記を参照。 | ロングポーリングトランスポートに固有の追加オプション。 |
+| `WebSockets` | 下記を参照。 | WebSocket トランスポートに固有の追加オプション。 |
 
 ::: moniker-end
 
@@ -227,12 +227,12 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 | `AuthorizationData` | ハブクラスに適用された @no__t 0 属性から自動的に収集されるデータ。 | クライアントがハブへの接続を承認されているかどうかを判断するために使用される[Iauthorizedata](/dotnet/api/microsoft.aspnetcore.authorization.iauthorizedata)オブジェクトの一覧。 |
 | `TransportMaxBufferSize` | 32 KB | サーバーがバッファーするアプリによって送信される最大バイト数。 この値を大きくすると、サーバーはより大きなメッセージを送信できるようになりますが、メモリの消費に悪影響を及ぼす可能性があります。 |
 | `Transports` | すべてのトランスポートが有効になります。 | クライアントが接続に使用できるトランスポートを制限できる @no__t 0 の値を列挙したビットフラグ。 |
-| `LongPolling` | 下記を参照。 | 長いポーリングトランスポートに固有の追加オプション。 |
-| `WebSockets` | 下記を参照。 | Websocket トランスポートに固有の追加オプション。 |
+| `LongPolling` | 下記を参照。 | ロングポーリングトランスポートに固有の追加オプション。 |
+| `WebSockets` | 下記を参照。 | WebSocket トランスポートに固有の追加オプション。 |
 
 ::: moniker-end
 
-長いポーリングトランスポートには、`LongPolling` プロパティを使用して構成できる追加のオプションがあります。
+ロングポーリングトランスポートには、`LongPolling` プロパティを使用して構成できる追加のオプションがあります。
 
 | OPTION | 既定値 | 説明 |
 | ------ | ------------- | ----------- |
@@ -327,7 +327,7 @@ SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further detail
 
 SignalR によって使用されるトランスポートは @no__t 0 呼び出し (JavaScript では `withUrl`) で構成できます。 @No__t-0 の値のビットごとの or を使用して、指定したトランスポートのみを使用するようにクライアントを制限できます。 既定では、すべてのトランスポートが有効になっています。
 
-たとえば、サーバーから送信されたイベントトランスポートを無効にし、Websocket と長いポーリング接続を許可するには、次のようにします。
+たとえば、Server-Sent Eventsトランスポートを無効にし、WebSocket とロングポーリング接続を許可するには、次のようにします。
 
 ```csharp
 var connection = new HubConnectionBuilder()
@@ -351,7 +351,7 @@ let connection = new signalR.HubConnectionBuilder()
 
 ::: moniker range="= aspnetcore-3.0"
 
-Java クライアントでは、トランスポートは、`HttpHubConnectionBuilder` の `withTransport` メソッドを使用して選択されます。 Java クライアントでは、既定で Websocket トランスポートが使用されます。
+Java クライアントでは、トランスポートは、`HttpHubConnectionBuilder` の `withTransport` メソッドを使用して選択されます。 Java クライアントでは、既定で WebSocket トランスポートが使用されます。
 
 ```java
 HubConnection hubConnection = HubConnectionBuilder.create("https://example.com/myhub")
@@ -366,7 +366,7 @@ HubConnection hubConnection = HubConnectionBuilder.create("https://example.com/m
 
 ### <a name="configure-bearer-authentication"></a>ベアラー認証を構成する
 
-SignalR 要求と共に認証データを提供するには、`AccessTokenProvider` オプション (JavaScript の `accessTokenFactory`) を使用して、目的のアクセストークンを返す関数を指定します。 .NET クライアントでは、このアクセストークンは HTTP "ベアラー認証" トークンとして渡されます (型が `Bearer` の `Authorization` ヘッダーを使用します)。 JavaScript クライアントでは、アクセストークンはベアラートークンとして使用されますが、ブラウザー Api がヘッダー (特に、サーバーが送信するイベントと Websocket 要求) を適用する機能を制限する場合は**例外**です。 このような場合、アクセストークンはクエリ文字列値として指定され `access_token` です。
+SignalR 要求と共に認証データを提供するには、`AccessTokenProvider` オプション (JavaScript の `accessTokenFactory`) を使用して、目的のアクセストークンを返す関数を指定します。 .NET クライアントでは、このアクセストークンは HTTP "ベアラー認証" トークンとして渡されます (型が `Bearer` の `Authorization` ヘッダーを使用します)。 JavaScript クライアントでは、アクセストークンはベアラートークンとして使用されますが、ブラウザー Api がヘッダー (特に、サーバーが送信するイベントと WebSocket 要求) を適用する機能を制限する場合は**例外**です。 このような場合、アクセストークンはクエリ文字列値として指定され `access_token` です。
 
 .NET クライアントでは、`WithUrl` のオプションデリゲートを使用して `AccessTokenProvider` オプションを指定できます。
 
@@ -475,15 +475,15 @@ HubConnection hubConnection = HubConnectionBuilder.create("https://example.com/m
 | .NET オプション |  既定値 | 説明 |
 | ----------- | -------------- | ----------- |
 | `AccessTokenProvider` | `null` | HTTP 要求でベアラー認証トークンとして指定された文字列を返す関数。 |
-| `SkipNegotiation` | `false` | ネゴシエーションの手順をスキップするには、`true` に設定します。 **Websocket トランスポートが有効なトランスポートのみである場合にのみサポートされ**ます。 Azure SignalR サービスを使用している場合、この設定を有効にすることはできません。 |
+| `SkipNegotiation` | `false` | ネゴシエーションの手順をスキップするには、`true` に設定します。 **WebSocket トランスポートが有効なトランスポートのみである場合にのみサポートされ**ます。 Azure SignalR サービスを使用している場合、この設定を有効にすることはできません。 |
 | `ClientCertificates` | Empty | 認証要求に送信する TLS 証明書のコレクション。 |
 | `Cookies` | Empty | すべての HTTP 要求と共に送信する HTTP クッキーのコレクション。 |
 | `Credentials` | Empty | すべての HTTP 要求と共に送信する資格情報。 |
-| `CloseTimeout` | 5 秒 | Websocket のみ。 サーバーが終了要求を確認するのを終了した後にクライアントが待機する最大時間。 この時間内にサーバーが終了を認識しない場合、クライアントは切断されます。 |
+| `CloseTimeout` | 5 秒 | WebSocket のみ。 サーバーが終了要求を確認するのを終了した後にクライアントが待機する最大時間。 この時間内にサーバーが終了を認識しない場合、クライアントは切断されます。 |
 | `Headers` | Empty | すべての HTTP 要求と共に送信する追加の HTTP ヘッダーのマップ。 |
 | `HttpMessageHandlerFactory` | `null` | HTTP 要求を送信するために使用される @no__t 0 の構成または置換に使用できるデリゲート。 WebSocket 接続には使用されません。 このデリゲートは null 以外の値を返す必要があり、パラメーターとして既定値を受け取ります。 既定値の設定を変更して返すか、または新しい `HttpMessageHandler` インスタンスを返します。 **ハンドラーを置き換えるときに、提供されたハンドラーから保持する設定をコピーしてください。それ以外の場合、構成されているオプション (Cookie やヘッダーなど) は新しいハンドラーに適用されません。** |
 | `Proxy` | `null` | HTTP 要求を送信するときに使用する HTTP プロキシ。 |
-| `UseDefaultCredentials` | `false` | このブール値を設定すると、HTTP および Websocket 要求の既定の資格情報が送信されます。 これにより、Windows 認証を使用できるようになります。 |
+| `UseDefaultCredentials` | `false` | このブール値を設定すると、HTTP および WebSocket 要求の既定の資格情報が送信されます。 これにより、Windows 認証を使用できるようになります。 |
 | `WebSocketConfiguration` | `null` | 追加の WebSocket オプションを構成するために使用できるデリゲート。 オプションの構成に使用できる[ClientWebSocketOptions](/dotnet/api/system.net.websockets.clientwebsocketoptions)のインスタンスを受け取ります。 |
 
 # <a name="javascripttabjavascript"></a>[JavaScript](#tab/javascript)
@@ -491,14 +491,14 @@ HubConnection hubConnection = HubConnectionBuilder.create("https://example.com/m
 | JavaScript オプション | 既定値 | 説明 |
 | ----------------- | ------------- | ----------- |
 | `accessTokenFactory` | `null` | HTTP 要求でベアラー認証トークンとして指定された文字列を返す関数。 |
-| `skipNegotiation` | `false` | ネゴシエーションの手順をスキップするには、`true` に設定します。 **Websocket トランスポートが有効なトランスポートのみである場合にのみサポートされ**ます。 Azure SignalR サービスを使用している場合、この設定を有効にすることはできません。 |
+| `skipNegotiation` | `false` | ネゴシエーションの手順をスキップするには、`true` に設定します。 **WebSocket トランスポートが有効なトランスポートのみである場合にのみサポートされ**ます。 Azure SignalR サービスを使用している場合、この設定を有効にすることはできません。 |
 
 # <a name="javatabjava"></a>[Java](#tab/java)
 
 | Java オプション | 既定値 | 説明 |
 | ----------- | ------------- | ----------- |
 | `withAccessTokenProvider` | `null` | HTTP 要求でベアラー認証トークンとして指定された文字列を返す関数。 |
-| `shouldSkipNegotiate` | `false` | ネゴシエーションの手順をスキップするには、`true` に設定します。 **Websocket トランスポートが有効なトランスポートのみである場合にのみサポートされ**ます。 Azure SignalR サービスを使用している場合、この設定を有効にすることはできません。 |
+| `shouldSkipNegotiate` | `false` | ネゴシエーションの手順をスキップするには、`true` に設定します。 **WebSocket トランスポートが有効なトランスポートのみである場合にのみサポートされ**ます。 Azure SignalR サービスを使用している場合、この設定を有効にすることはできません。 |
 | `withHeader` `withHeaders` | Empty | すべての HTTP 要求と共に送信する追加の HTTP ヘッダーのマップ。 |
 
 ---
