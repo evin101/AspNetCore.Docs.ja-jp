@@ -27,7 +27,7 @@ ASP.NET Core Id は、ログインを作成および管理するための完全�
 
 ## <a name="configuration"></a>構成
 
-アプリで[AspNetCore メタパッケージ](xref:fundamentals/metapackage-app)が使用されていない場合は、 [AspNetCore](https://www.nuget.org/packages/Microsoft.AspNetCore.Authentication.Cookies/)パッケージのプロジェクトファイルにパッケージ参照を作成します。
+アプリで[AspNetCore メタパッケージ](xref:fundamentals/metapackage-app)が使用されていない場合は、 [Microsoft.AspNetCore.Authentication.Cookies](https://www.nuget.org/packages/Microsoft.AspNetCore.Authentication.Cookies/)パッケージのプロジェクトファイルにパッケージ参照を作成します。
 
 `Startup.ConfigureServices` メソッドで、<xref:Microsoft.Extensions.DependencyInjection.AuthenticationServiceCollectionExtensions.AddAuthentication*> と <xref:Microsoft.Extensions.DependencyInjection.CookieExtensions.AddCookie*> のメソッドを使用して認証ミドルウェアサービスを作成します。
 
@@ -244,7 +244,7 @@ ASP.NET Core Id は、ログインを作成および管理するための完全�
 
 ## <a name="configuration"></a>構成
 
-アプリで[AspNetCore メタパッケージ](xref:fundamentals/metapackage-app)が使用されていない場合は、 [AspNetCore](https://www.nuget.org/packages/Microsoft.AspNetCore.Authentication.Cookies/)パッケージのプロジェクトファイルにパッケージ参照を作成します。
+アプリで[AspNetCore メタパッケージ](xref:fundamentals/metapackage-app)が使用されていない場合は、 [Microsoft.AspNetCore.Authentication.Cookies](https://www.nuget.org/packages/Microsoft.AspNetCore.Authentication.Cookies/)パッケージのプロジェクトファイルにパッケージ参照を作成します。
 
 `Startup.ConfigureServices` メソッドで、<xref:Microsoft.Extensions.DependencyInjection.AuthenticationServiceCollectionExtensions.AddAuthentication*> および <xref:Microsoft.Extensions.DependencyInjection.CookieExtensions.AddCookie*> メソッドを使用して認証ミドルウェアサービスを作成します。
 
