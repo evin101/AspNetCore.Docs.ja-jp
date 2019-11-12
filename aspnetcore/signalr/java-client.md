@@ -101,14 +101,14 @@ HubConnection hubConnection = HubConnectionBuilder.create("YOUR HUB URL HERE")
 ::: moniker range=">= aspnetcore-3.0"
 
 * JSON プロトコルのみがサポートされています。
-* フォールバックのトランスポートとトランスポート サーバー送信イベントはサポートされていません。
+* フォールバックのトランスポートとトランスポート Server-Sent Events はサポートされていません。
 
 ::: moniker-end
 
 ::: moniker range="< aspnetcore-3.0"
 
 * JSON プロトコルのみがサポートされています。
-* Websocket トランスポートのみがサポートされています。
+* WebSocket トランスポートのみがサポートされています。
 * ストリーミングはまだサポートされません。
 
 ::: moniker-end
