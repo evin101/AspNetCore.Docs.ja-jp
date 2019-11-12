@@ -16,7 +16,7 @@ ms.locfileid: "67814980"
 ---
 # <a name="aspnet-core-signalr-java-client"></a>ASP.NET Core SignalR の Java クライアント
 
-によって[Mikael Mengistu](https://twitter.com/MikaelM_12)
+作成者: [Mikael Mengistu](https://twitter.com/MikaelM_12)
 
 Java クライアントでは、Java のコードは、Android アプリを含む、ASP.NET Core SignalR サーバーに接続します。 ように、 [JavaScript クライアント](xref:signalr/javascript-client)と[.NET クライアント](xref:signalr/dotnet-client)、Java クライアントでは、リアルタイムでハブにメッセージを送受信することができます。 Java クライアントとは、ASP.NET Core 2.2 で使用可能な以降です。
 
