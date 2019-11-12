@@ -15,7 +15,7 @@ ms.locfileid: "67815560"
 ---
 # <a name="external-oauth-authentication-providers"></a>外部の OAuth 認証プロバイダー
 
-によって[Rick Anderson](https://twitter.com/RickAndMSFT)、 [Pranav Rastogi](https://github.com/rustd)、および[Valeriy Novytskyy](https://github.com/01binary)
+作成者: [Rick Anderson](https://twitter.com/RickAndMSFT)、 [Pranav Rastogi](https://github.com/rustd)、および[Valeriy Novytskyy](https://github.com/01binary)
 
 次の一覧には、ASP.NET Core アプリを使用する共通の外部 OAuth 認証プロバイダーが含まれています。 によって管理されるものなどのサード パーティの NuGet パッケージ[aspnet contrib](https://www.nuget.org/packages?q=owners%3Aaspnet-contrib+title%3AOAuth)、ASP.NET Core チームによって実装される認証プロバイダーを補完するために使用できます。
 
