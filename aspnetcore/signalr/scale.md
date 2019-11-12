@@ -18,7 +18,7 @@ ms.locfileid: "73905719"
 ---
 # <a name="aspnet-core-opno-locsignalr-hosting-and-scaling"></a>ASP.NET Core SignalR のホストとスケーリング
 
-[Andrew](https://twitter.com/anurse)、 [Brady](https://twitter.com/bradygaster)、および[Tom Dykstra](https://github.com/tdykstra)によって、
+作成者: [Andrew](https://twitter.com/anurse)、 [Brady](https://twitter.com/bradygaster)、および[Tom Dykstra](https://github.com/tdykstra)
 
 この記事では、ASP.NET Core SignalRを使用する高トラフィックアプリのホストとスケーリングに関する考慮事項について説明します。
 
