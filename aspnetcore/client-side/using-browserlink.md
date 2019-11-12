@@ -15,7 +15,7 @@ ms.locfileid: "64894709"
 ---
 # <a name="browser-link-in-aspnet-core"></a>ASP.NET Core でのブラウザー リンク
 
-によって[Nicolò Carandini](https://github.com/ncarandini)、 [Mike Wasson](https://github.com/MikeWasson)、および[Tom Dykstra](https://github.com/tdykstra)
+作成者: [Nicolò Carandini](https://github.com/ncarandini)、 [Mike Wasson](https://github.com/MikeWasson)、および[Tom Dykstra](https://github.com/tdykstra)
 
 ブラウザー リンクは、Visual studio 開発環境と 1 つまたは複数の web ブラウザーの間の通信チャネルを作成する機能です。 クロス ブラウザー テスト用に便利です、いくつかのブラウザーで web のアプリケーションは、一度にを更新するブラウザー リンクを使用できます。
 
