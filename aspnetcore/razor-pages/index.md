@@ -17,7 +17,7 @@ ms.locfileid: "73034274"
 
 ::: moniker range=">= aspnetcore-3.0"
 
-[Rick Anderson](https://twitter.com/RickAndMSFT) および [Ryan Nowak](https://github.com/rynowak) 著
+作成者: [Rick Anderson](https://twitter.com/RickAndMSFT) および [Ryan Nowak](https://github.com/rynowak)
 
 Razor ページを利用することで、ページのコーディングに今まで以上に集中できます。また、コントローラーとビューを使用する場合より生産的になります。
 
@@ -610,7 +610,7 @@ Razor ページのルートは既定で */Pages* ディレクトリです。 <xr
 
 ::: moniker range="< aspnetcore-3.0"
 
-[Rick Anderson](https://twitter.com/RickAndMSFT) および [Ryan Nowak](https://github.com/rynowak) 著
+作成者: [Rick Anderson](https://twitter.com/RickAndMSFT) および [Ryan Nowak](https://github.com/rynowak)
 
 Razor ページは、ページ コーディングに重点を置いたシナリオをより簡略化し、生産性を高める ASP.NET Core MVC の新たな側面です。
 
