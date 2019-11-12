@@ -16,7 +16,7 @@ ms.locfileid: "71211714"
 ---
 # <a name="secure-aspnet-core-blazor-server-apps"></a>Blazor サーバーアプリをセキュリティで保護する ASP.NET Core
 
-[Javier Calvarro jeannine](https://github.com/javiercn)
+[Javier Calvarro Nelson](https://github.com/javiercn)
 
 Blazor サーバーアプリは、サーバーとクライアントが長期間の関係を維持する*ステートフル*なデータ処理モデルを採用しています。 永続的な状態は回線によって維持されます。[回線](xref:blazor/state-management)は、有効期間が長い可能性もある接続にまたがる場合があります。
 
