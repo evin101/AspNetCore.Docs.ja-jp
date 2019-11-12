@@ -17,7 +17,7 @@ ms.locfileid: "64881957"
 
 [![カバーの画像](./media/cover-large.png)](https://aka.ms/devopsbook)
 
-[Cam Soper](https://twitter.com/camsoper) および [Scott Addie](https://twitter.com/scottaddie) 著
+作成者: [Cam Soper](https://twitter.com/camsoper) および [Scott Addie](https://twitter.com/scottaddie)
 
 このガイドは、[ダウンロード可能 PDF 電子ブック](https://aka.ms/devopsbook)として入手できます。
 
