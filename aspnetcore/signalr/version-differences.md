@@ -21,7 +21,7 @@ ASP.NET Core SignalR は、ASP.NET SignalR のクライアントまたはサー�
 
 |                      | ASP.NET SignalR | ASP.NET Core SignalR |
 | -------------------- | --------------- | -------------------- |
-| サーバー NuGet パッケージ | [Microsoft.AspNet.SignalR](https://www.nuget.org/packages/Microsoft.AspNet.SignalR/) | [AspNetCore](https://www.nuget.org/packages/Microsoft.AspNetCore.App/) (.net Core)<br>[AspNetCore. SignalR](https://www.nuget.org/packages/Microsoft.AspNetCore.SignalR/) (.NET Framework) |
+| サーバー NuGet パッケージ | [Microsoft.AspNet.SignalR](https://www.nuget.org/packages/Microsoft.AspNet.SignalR/) | [Microsoft.AspNetCore.App](https://www.nuget.org/packages/Microsoft.AspNetCore.App/) (.net Core)<br>[AspNetCore. SignalR](https://www.nuget.org/packages/Microsoft.AspNetCore.SignalR/) (.NET Framework) |
 | クライアント NuGet パッケージ | [SignalR (Microsoft AspNet. クライアント)](https://www.nuget.org/packages/Microsoft.AspNet.SignalR.Client/)<br>[SignalR (Microsoft AspNet)](https://www.nuget.org/packages/Microsoft.AspNet.SignalR.JS/) | [AspNetCore. SignalR](https://www.nuget.org/packages/Microsoft.AspNetCore.SignalR.Client/) |
 | クライアントの npm パッケージ | [signalr](https://www.npmjs.com/package/signalr) | [@aspnet/signalr](https://www.npmjs.com/package/@aspnet/signalr) |
 | Java クライアント | [GitHub リポジトリ](https://github.com/SignalR/java-client)れ  | Maven パッケージ[signalr](https://search.maven.org/artifact/com.microsoft.signalr/signalr) |
