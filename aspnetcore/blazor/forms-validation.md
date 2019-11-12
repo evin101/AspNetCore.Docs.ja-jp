@@ -207,7 +207,7 @@ public class Starship
 
 **Blazor パッケージ (AspNetCore の検証)**
 
-[AspNetCore](https://www.nuget.org/packages/Microsoft.AspNetCore.Blazor.DataAnnotations.Validation)は、`DataAnnotationsValidator` コンポーネントを使用して、検証エクスペリエンスのギャップを埋めるパッケージです。 パッケージは現在*試験段階*です。今後のリリースでは、これらのシナリオを ASP.NET Core framework に追加する予定です。
+[Microsoft.AspNetCore.Blazor.DataAnnotations.Validation](https://www.nuget.org/packages/Microsoft.AspNetCore.Blazor.DataAnnotations.Validation)は、`DataAnnotationsValidator` コンポーネントを使用して、検証エクスペリエンスのギャップを埋めるパッケージです。 パッケージは現在*試験段階*です。今後のリリースでは、これらのシナリオを ASP.NET Core framework に追加する予定です。
 
 `DataAnnotationsValidator` コンポーネントでは、検証モデルの複合プロパティのサブプロパティは検証されません。 コレクション型プロパティの項目は検証されません。 これらの型を検証するために、`Microsoft.AspNetCore.Blazor.DataAnnotations.Validation` パッケージでは、`ObjectGraphDataAnnotationsValidator` コンポーネントと連動する `ValidateComplexType` 検証属性が導入されています。 これらの型の使用例については、 [aspnet/Samples GitHub リポジトリの Blazor 検証サンプル](https://github.com/aspnet/samples/tree/master/samples/aspnetcore/blazor/Validation)を参照してください。
 
