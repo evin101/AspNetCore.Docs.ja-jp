@@ -15,7 +15,7 @@ ms.locfileid: "71108057"
 ---
 # <a name="custom-authorization-policy-providers-using-iauthorizationpolicyprovider-in-aspnet-core"></a>ASP.NET Core で IAuthorizationPolicyProvider を使用するカスタム承認ポリシープロバイダー 
 
-によって[Mike Rousos](https://github.com/mjrousos)
+作成者: [Mike Rousos](https://github.com/mjrousos)
 
 通常、[ポリシーベースの承認](xref:security/authorization/policies)を使用する場合、ポリシーは`AuthorizationOptions.AddPolicy` 、承認サービス構成の一部としてを呼び出すことによって登録されます。 場合によっては、すべての承認ポリシーをこの方法で登録することができない (または望ましくない) ことがあります。 そのような場合は、カスタム`IAuthorizationPolicyProvider`を使用して、承認ポリシーの提供方法を制御できます。
 
