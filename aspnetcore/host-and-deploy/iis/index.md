@@ -264,7 +264,7 @@ Web SDK ファイルの変換を無効にすると、 *processPath*と*引数*�
    **Windows 認証 (任意)**  
    Windows 認証を有効にするには、 **[Web サーバー]**  >  **[セキュリティ]** ノードを展開します。 **[Windows 認証]** 機能を選択します。 詳細については、「[Windows Authentication \<windowsAuthentication>](/iis/configuration/system.webServer/security/authentication/windowsAuthentication/)」および「[Configure Windows authentication](xref:security/authentication/windowsauth)」(Windows 認証の構成) を参照してください。
 
-   **Websocket (省略可能)**  
+   **WebSocket (省略可能)**  
    WebSockets は、ASP.NET Core 1.1 以降でサポートされています。 WebSocket を有効にするには、 **[Web サーバー]**  >  **[アプリケーション開発]** ノードを展開します。 **[WebSocket プロトコル]** 機能を選択します。 詳細については、[WebSockets](xref:fundamentals/websockets) に関するページを参照してください。
 
 1. **[確認]** のステップを経て Web サーバーの役割とサービスをインストールします。 **Web サーバー (IIS)** の役割をインストールした後、サーバーと IIS の再起動は必要ありません。
@@ -286,7 +286,7 @@ Web SDK ファイルの変換を無効にすると、 *processPath*と*引数*�
    **Windows 認証 (任意)**  
    Windows 認証を有効にするには、 **[World Wide Web サービス]**  >  **[セキュリティ]** ノードを展開します。 **[Windows 認証]** 機能を選択します。 詳細については、「[Windows Authentication \<windowsAuthentication>](/iis/configuration/system.webServer/security/authentication/windowsAuthentication/)」および「[Configure Windows authentication](xref:security/authentication/windowsauth)」(Windows 認証の構成) を参照してください。
 
-   **Websocket (省略可能)**  
+   **WebSocket (省略可能)**  
    WebSockets は、ASP.NET Core 1.1 以降でサポートされています。 WebSocket を有効にするには、 **[World Wide Web サービス]**  >  **[アプリケーション開発機能]** ノードを展開します。 **[WebSocket プロトコル]** 機能を選択します。 詳細については、[WebSockets](xref:fundamentals/websockets) に関するページを参照してください。
 
 1. IIS のインストールに再起動が必要な場合は、システムを再起動します。
