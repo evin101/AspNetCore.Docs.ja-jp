@@ -16,7 +16,7 @@ ms.locfileid: "73611457"
 ---
 # <a name="response-caching-middleware-in-aspnet-core"></a>ASP.NET Core での応答キャッシュミドルウェア
 
-[Luke Latham](https://github.com/guardrex)および[John Luo](https://github.com/JunTaoLuo)
+作成者: [Luke Latham](https://github.com/guardrex)および[John Luo](https://github.com/JunTaoLuo)
 
 [サンプル コードを表示またはダウンロード](https://github.com/aspnet/AspNetCore.Docs/tree/master/aspnetcore/performance/caching/middleware/samples)します ([ダウンロード方法](xref:index#how-to-download-a-sample))。
 
