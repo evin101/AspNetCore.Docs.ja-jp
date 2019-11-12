@@ -25,9 +25,9 @@ ms.locfileid: "71925351"
 | [サーバーからクライアントへのストリーミング](xref:signalr/streaming)          |1.0.0|1.0.0|1.0.0|
 | [クライアントとサーバー間のストリーミング](xref:signalr/streaming)          |3.0.0|3.0.0|3.0.0|
 | 自動再接続 ([.net](/aspnet/core/signalr/dotnet-client?view=aspnetcore-3.0&tabs=visual-studio#handle-lost-connection)、 [JavaScript](/aspnet/core/signalr/javascript-client?view=aspnetcore-3.0#reconnect-clients))          |3.0.0|3.0.0|❌|
-| Websocket トランスポート |1.0.0|1.0.0|1.0.0|
-| サーバー送信イベントトランスポート |1.0.0|1.0.0|❌|
-| 長いポーリングトランスポート |1.0.0|1.0.0|3.0.0|
+| WebSocket トランスポート |1.0.0|1.0.0|1.0.0|
+| Server-Sent Events トランスポート |1.0.0|1.0.0|❌|
+| ロングポーリングトランスポート |1.0.0|1.0.0|3.0.0|
 | JSON ハブプロトコル |1.0.0|1.0.0|1.0.0|
 | MessagePack ハブ プロトコル |1.0.0|1.0.0|❌|
 
