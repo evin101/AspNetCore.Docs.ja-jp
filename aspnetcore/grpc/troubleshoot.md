@@ -16,7 +16,7 @@ ms.locfileid: "72519056"
 ---
 # <a name="troubleshoot-grpc-on-net-core"></a>.NET Core での gRPC のトラブルシューティング
 
-[James のニュートン-キング](https://twitter.com/jamesnk)別
+[James Newton-King](https://twitter.com/jamesnk)別
 
 このドキュメントでは、.NET で gRPC アプリを開発するときによく発生する問題について説明します。
 
