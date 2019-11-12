@@ -14,7 +14,7 @@ ms.locfileid: "67500472"
 ---
 # <a name="identity-model-customization-in-aspnet-core"></a>ASP.NET Core での Identity モデルのカスタマイズ
 
-によって[Arthur Vickers](https://github.com/ajcvickers)
+作成者: [Arthur Vickers](https://github.com/ajcvickers)
 
 ASP.NET Core Identity は、管理および ASP.NET Core アプリでユーザー アカウントを格納するためのフレームワークを提供します。 Id が、プロジェクトに追加時に**個々 のユーザー アカウント**認証メカニズムとして選択されます。 既定では、Id はなりますの Entity Framework (EF) を使用して、コア データ モデル。 この記事では、Id モデルをカスタマイズする方法について説明します。
 
