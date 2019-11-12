@@ -16,7 +16,7 @@ ms.locfileid: "70773931"
 ---
 # <a name="host-aspnet-core-signalr-in-background-services"></a>バックグラウンドサービスでのホスト ASP.NET Core SignalR
 
-[Brady](https://twitter.com/bradygaster)による
+作成者: [Brady](https://twitter.com/bradygaster)
 
 この記事では、次のガイダンスを提供します。
 
