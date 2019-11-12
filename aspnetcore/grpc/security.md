@@ -16,7 +16,7 @@ ms.locfileid: "70310367"
 ---
 # <a name="security-considerations-in-grpc-for-aspnet-core"></a>GRPC での ASP.NET Core のセキュリティに関する考慮事項
 
-[James のニュートン-キング](https://twitter.com/jamesnk)別
+[James Newton-King](https://twitter.com/jamesnk)別
 
 この記事では、.NET Core を使用して gRPC をセキュリティで保護する方法について説明します。
 
