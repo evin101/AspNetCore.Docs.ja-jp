@@ -15,7 +15,7 @@ ms.locfileid: "71250734"
 ---
 # <a name="logging-and-diagnostics-in-grpc-on-net"></a>.NET での gRPC でのログ記録と診断
 
-[James のニュートン-キング](https://twitter.com/jamesnk)別
+[James Newton-King](https://twitter.com/jamesnk)別
 
 この記事では、問題のトラブルシューティングに役立つ gRPC アプリから診断情報を収集するためのガイダンスを提供します。
 
