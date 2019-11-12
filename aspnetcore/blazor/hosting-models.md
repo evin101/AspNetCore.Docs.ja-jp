@@ -16,7 +16,7 @@ ms.locfileid: "73616587"
 ---
 # <a name="aspnet-core-blazor-hosting-models"></a>Blazor ホスティングモデルの ASP.NET Core
 
-[Daniel Roth](https://github.com/danroth27)
+作成者: [Daniel Roth](https://github.com/danroth27)
 
 [!INCLUDE[](~/includes/blazorwasm-preview-notice.md)]
 
