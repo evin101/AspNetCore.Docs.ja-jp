@@ -18,11 +18,11 @@ ms.locfileid: "72246490"
 
 ## <a name="jsonmessagepack-serialization-options"></a>JSON/MessagePack のシリアル化オプション
 
-ASP.NET Core SignalR は、メッセージをエンコードするための2つのプロトコルをサポートしています。[JSON](https://www.json.org/)および[messagepack](https://msgpack.org/index.html)。 各プロトコルには、シリアル化の構成オプションがあります。
+ASP.NET Core SignalR は、メッセージをエンコードするための2つのプロトコルをサポートしています。[JSON](https://www.json.org/)および[MessagePack](https://msgpack.org/index.html)。 各プロトコルには、シリアル化の構成オプションがあります。
 
 ::: moniker range=">= aspnetcore-3.0"
 
-JSON のシリアル化は、 [Addjsonprotocol](/dotnet/api/microsoft.extensions.dependencyinjection.jsonprotocoldependencyinjectionextensions.addjsonprotocol)拡張メソッドを使用して、サーバー上で構成できます。 `AddJsonProtocol` は、`Startup.ConfigureServices` の[AddSignalR](/dotnet/api/microsoft.extensions.dependencyinjection.signalrdependencyinjectionextensions.addsignalr)の後に追加できます。 @No__t-0 メソッドは、@no__t 1 つのオブジェクトを受け取るデリゲートを受け取ります。 そのオブジェクトの[PayloadSerializerOptions](/dotnet/api/microsoft.aspnetcore.signalr.jsonhubprotocoloptions.payloadserializeroptions)プロパティは、引数と戻り値のシリアル化を構成するために使用できる @no__t 1 @no__t のオブジェクトです。 詳細については、「system.string」[ドキュメント](/dotnet/api/system.text.json)を参照してください。
+JSON のシリアル化は、 [AddJsonProtocol](/dotnet/api/microsoft.extensions.dependencyinjection.jsonprotocoldependencyinjectionextensions.addjsonprotocol)拡張メソッドを使用して、サーバー上で構成できます。 `AddJsonProtocol` は、`Startup.ConfigureServices` の[AddSignalR](/dotnet/api/microsoft.extensions.dependencyinjection.signalrdependencyinjectionextensions.addsignalr)の後に追加できます。 @No__t-0 メソッドは、@no__t 1 つのオブジェクトを受け取るデリゲートを受け取ります。 そのオブジェクトの[PayloadSerializerOptions](/dotnet/api/microsoft.aspnetcore.signalr.jsonhubprotocoloptions.payloadserializeroptions)プロパティは、引数と戻り値のシリアル化を構成するために使用できる @no__t 1 @no__t のオブジェクトです。 詳細については、「system.string」[ドキュメント](/dotnet/api/system.text.json)を参照してください。
 
 たとえば、既定の "キャメルケース" の名前ではなく、プロパティ名の大文字と小文字の区別を変更しないようにシリアライザーを構成するには、`Startup.ConfigureServices` で次のコードを使用します。
 
@@ -47,17 +47,17 @@ var connection = new HubConnectionBuilder()
     .Build();
 ```
 
-### <a name="switch-to-newtonsoftjson"></a>Newtonsoft. Json に切り替える
+### <a name="switch-to-newtonsoftjson"></a>Newtonsoft.Json に切り替える
 
-@No__t-1 でサポートされていない `Newtonsoft.Json` の機能が必要な場合は、「 [Newtonsoft. Json に切り替える」を](xref:migration/22-to-30#switch-to-newtonsoftjson)参照してください。
+@No__t-1 でサポートされていない `Newtonsoft.Json` の機能が必要な場合は、「[Newtonsoft.Json に切り替える](xref:migration/22-to-30#switch-to-newtonsoftjson)」を参照してください。
 
 ::: moniker-end
 
 ::: moniker range="<= aspnetcore-2.2"
 
-JSON のシリアル化は、 [addjsonprotocol](/dotnet/api/microsoft.extensions.dependencyinjection.jsonprotocoldependencyinjectionextensions.addjsonprotocol) 拡張メソッドを使用してサーバー上で構成できます。これは `Startup.ConfigureServices` メソッドの [AddSignalR](/dotnet/api/microsoft.extensions.dependencyinjection.signalrdependencyinjectionextensions.addsignalr) の後に追加できます。 @No__t-0 メソッドは、@no__t 1 つのオブジェクトを受け取るデリゲートを受け取ります。 そのオブジェクトの[PayloadSerializerSettings](/dotnet/api/microsoft.aspnetcore.signalr.jsonhubprotocoloptions.payloadserializersettings)プロパティは、引数と戻り値のシリアル化を構成するために使用できる JSON.NET `JsonSerializerSettings` オブジェクトです。 詳細については、 [JSON.NET のドキュメント](https://www.newtonsoft.com/json/help/html/Introduction.htm)を参照してください。
+JSON のシリアル化は、 [AddJsonProtocol](/dotnet/api/microsoft.extensions.dependencyinjection.jsonprotocoldependencyinjectionextensions.addjsonprotocol) 拡張メソッドを使用してサーバー上で構成できます。これは `Startup.ConfigureServices` メソッドの [AddSignalR](/dotnet/api/microsoft.extensions.dependencyinjection.signalrdependencyinjectionextensions.addsignalr) の後に追加できます。 @No__t-0 メソッドは、@no__t 1 つのオブジェクトを受け取るデリゲートを受け取ります。 そのオブジェクトの[PayloadSerializerSettings](/dotnet/api/microsoft.aspnetcore.signalr.jsonhubprotocoloptions.payloadserializersettings)プロパティは、引数と戻り値のシリアル化を構成するために使用できる JSON.NET `JsonSerializerSettings` オブジェクトです。 詳細については、 [JSON.NET のドキュメント](https://www.newtonsoft.com/json/help/html/Introduction.htm)を参照してください。
  
-たとえば、既定の "キャメルケース" 名の代わりに "" という名前のプロパティ名を使用するようにシリアライザーを構成するには、`Startup.ConfigureServices` で次のコードを使用します。
+たとえば、既定の "キャメルケース" 名の代わりに "パスカルケース" のプロパティ名を使用するようにシリアライザーを構成するには、`Startup.ConfigureServices` で次のコードを使用します。
  
 ```csharp
 services.AddSignalR()
@@ -89,7 +89,7 @@ var connection = new HubConnectionBuilder()
 
 ### <a name="messagepack-serialization-options"></a>MessagePack のシリアル化オプション
 
-MessagePack のシリアル化は、 [Addmessagepackprotocol](/dotnet/api/microsoft.extensions.dependencyinjection.msgpackprotocoldependencyinjectionextensions.addmessagepackprotocol)呼び出しにデリゲートを指定することによって構成できます。 詳細については[、「SignalR の Messagepack](xref:signalr/messagepackhubprotocol) 」を参照してください。
+MessagePack のシリアル化は、 [AddMessagePackProtocol](/dotnet/api/microsoft.extensions.dependencyinjection.msgpackprotocoldependencyinjectionextensions.addmessagepackprotocol)呼び出しにデリゲートを指定することによって構成できます。 詳細については、[SignalR の MessagePack](xref:signalr/messagepackhubprotocol) 」を参照してください。
 
 > [!NOTE]
 > 現時点では、JavaScript クライアントで MessagePack のシリアル化を構成することはできません。
@@ -161,7 +161,7 @@ services.AddSignalR().AddHubOptions<MyHub>(options =>
 
 ::: moniker range=">= aspnetcore-3.0"
 
-トランスポートおよびメモリバッファー管理に関連する詳細設定を構成するには、`HttpConnectionDispatcherOptions` を使用します。 これらのオプションは、`Startup.Configure` の[Maphub @ no__t-1T >](/dotnet/api/microsoft.aspnetcore.builder.hubendpointroutebuilderextensions.maphub)にデリゲートを渡すことによって構成されます。
+トランスポートおよびメモリバッファー管理に関連する詳細設定を構成するには、`HttpConnectionDispatcherOptions` を使用します。 これらのオプションは、`Startup.Configure` の[MapHub\<T>](/dotnet/api/microsoft.aspnetcore.builder.hubendpointroutebuilderextensions.maphub)にデリゲートを渡すことによって構成されます。
 
 ```csharp
 public void Configure(IApplicationBuilder app, IHostingEnvironment env)
@@ -183,7 +183,7 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 
 ::: moniker range="<= aspnetcore-2.2"
 
-トランスポートおよびメモリバッファー管理に関連する詳細設定を構成するには、`HttpConnectionDispatcherOptions` を使用します。 これらのオプションは、`Startup.Configure` の[Maphub @ no__t-1T >](/dotnet/api/microsoft.aspnetcore.signalr.hubroutebuilder.maphub)にデリゲートを渡すことによって構成されます。
+トランスポートおよびメモリバッファー管理に関連する詳細設定を構成するには、`HttpConnectionDispatcherOptions` を使用します。 これらのオプションは、`Startup.Configure` の[MapHub\<T>](/dotnet/api/microsoft.aspnetcore.signalr.hubroutebuilder.maphub)にデリゲートを渡すことによって構成されます。
 
 ```csharp
 public void Configure(IApplicationBuilder app, IHostingEnvironment env)
@@ -394,7 +394,7 @@ let connection = new signalR.HubConnectionBuilder()
     .build();
 ```
 
-SignalR Java クライアントでは、 [HttpHubConnectionBuilder](/java/api/com.microsoft.signalr._http_hub_connection_builder?view=aspnet-signalr-java)にアクセストークンファクトリを提供することによって、認証に使用するベアラートークンを構成できます。 [WithAccessTokenFactory](/java/api/com.microsoft.signalr._http_hub_connection_builder.withaccesstokenprovider?view=aspnet-signalr-java#com_microsoft_signalr__http_hub_connection_builder_withAccessTokenProvider_Single_String__)を使用して、 [RxJava](https://github.com/ReactiveX/RxJava) [単一の @ no__t-3string >](https://reactivex.io/documentation/single.html)を指定します。 [単一の defer](https://reactivex.io/RxJava/javadoc/io/reactivex/Single.html#defer-java.util.concurrent.Callable-)を呼び出すことで、クライアントのアクセストークンを生成するロジックを作成できます。
+SignalR Java クライアントでは、 [HttpHubConnectionBuilder](/java/api/com.microsoft.signalr._http_hub_connection_builder?view=aspnet-signalr-java)にアクセストークンファクトリを提供することによって、認証に使用するベアラートークンを構成できます。 [WithAccessTokenFactory](/java/api/com.microsoft.signalr._http_hub_connection_builder.withaccesstokenprovider?view=aspnet-signalr-java#com_microsoft_signalr__http_hub_connection_builder_withAccessTokenProvider_Single_String__)を使用して、 [RxJava](https://github.com/ReactiveX/RxJava) [Single\<String>](https://reactivex.io/documentation/single.html)を指定します。 [Single.defer](https://reactivex.io/RxJava/javadoc/io/reactivex/Single.html#defer-java.util.concurrent.Callable-)を呼び出すことで、クライアントのアクセストークンを生成するロジックを作成できます。
 
 ```java
 HubConnection hubConnection = HubConnectionBuilder.create("https://example.com/myhub")
