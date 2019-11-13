@@ -100,7 +100,7 @@ MessagePack のシリアル化は、 [Addmessagepackprotocol](/dotnet/api/micros
 
 ::: moniker range=">= aspnetcore-3.0"
 
-| OPTION | 既定値 | 説明 |
+| オプション | 既定値 | 説明 |
 | ------ | ------------- | ----------- |
 | `ClientTimeoutInterval` | 30 秒 | サーバーは、この間隔で (キープアライブを含む) メッセージを受信していない場合に、クライアントが切断されていると見なします。 クライアントが実際に切断されているとマークされるまでに、このタイムアウト間隔より長くかかることがあります。これは、この実装方法によるものです。 推奨値は、`KeepAliveInterval` の倍精度浮動小数点値です。|
 | `HandshakeTimeout` | 15 秒 | この期間内にクライアントが初期ハンドシェイクメッセージを送信しない場合、接続は閉じられます。 これは、ネットワーク待ち時間が非常に長いためにハンドシェイクのタイムアウトエラーが発生している場合にのみ変更する必要がある詳細設定です。 ハンドシェイクプロセスの詳細については、 [SignalR Hub プロトコルの仕様](https://github.com/aspnet/SignalR/blob/master/specs/HubProtocol.md)を参照してください。 |
@@ -114,7 +114,7 @@ MessagePack のシリアル化は、 [Addmessagepackprotocol](/dotnet/api/micros
 
 ::: moniker range="= aspnetcore-2.2"
 
-| OPTION | 既定値 | 説明 |
+| オプション | 既定値 | 説明 |
 | ------ | ------------- | ----------- |
 | `ClientTimeoutInterval` | 30 秒 | サーバーは、この間隔で (キープアライブを含む) メッセージを受信していない場合に、クライアントが切断されていると見なします。 クライアントが実際に切断されているとマークされるまでに、このタイムアウト間隔より長くかかることがあります。これは、この実装方法によるものです。 推奨値は、`KeepAliveInterval` の倍精度浮動小数点値です。|
 | `HandshakeTimeout` | 15 秒 | この期間内にクライアントが初期ハンドシェイクメッセージを送信しない場合、接続は閉じられます。 これは、ネットワーク待ち時間が非常に長いためにハンドシェイクのタイムアウトエラーが発生している場合にのみ変更する必要がある詳細設定です。 ハンドシェイクプロセスの詳細については、 [SignalR Hub プロトコルの仕様](https://github.com/aspnet/SignalR/blob/master/specs/HubProtocol.md)を参照してください。 |
@@ -126,7 +126,7 @@ MessagePack のシリアル化は、 [Addmessagepackprotocol](/dotnet/api/micros
 
 ::: moniker range="= aspnetcore-2.1"
 
-| OPTION | 既定値 | 説明 |
+| オプション | 既定値 | 説明 |
 | ------ | ------------- | ----------- |
 | `HandshakeTimeout` | 15 秒 | この期間内にクライアントが初期ハンドシェイクメッセージを送信しない場合、接続は閉じられます。 これは、ネットワーク待ち時間が非常に長いためにハンドシェイクのタイムアウトエラーが発生している場合にのみ変更する必要がある詳細設定です。 ハンドシェイクプロセスの詳細については、 [SignalR Hub プロトコルの仕様](https://github.com/aspnet/SignalR/blob/master/specs/HubProtocol.md)を参照してください。 |
 | `KeepAliveInterval` | 15 秒 | サーバーがこの間隔内にメッセージを送信していない場合は、接続を開いたままにするために ping メッセージが自動的に送信されます。 @No__t-0 に変更する場合は、クライアントの `ServerTimeout` @ no__t @ no__t の設定を変更します。 推奨される `ServerTimeout` @ no__t @ no__t は2倍 @no__t の値です。  |
@@ -208,7 +208,7 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 
 ::: moniker range=">= aspnetcore-3.0"
 
-| OPTION | 既定値 | 説明 |
+| オプション | 既定値 | 説明 |
 | ------ | ------------- | ----------- |
 | `ApplicationMaxBufferSize` | 32 KB | サーバーがバック圧力を適用する前に、クライアントから受信した最大バイト数。 この値を大きくすると、バック圧力を適用せずに、より大きいメッセージをサーバーがより迅速に受信できるようになりますが、メモリ使用量が増加する可能性があります。 |
 | `AuthorizationData` | ハブクラスに適用された @no__t 0 属性から自動的に収集されるデータ。 | クライアントがハブへの接続を承認されているかどうかを判断するために使用される[Iauthorizedata](/dotnet/api/microsoft.aspnetcore.authorization.iauthorizedata)オブジェクトの一覧。 |
@@ -221,7 +221,7 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 
 ::: moniker range="< aspnetcore-3.0"
 
-| OPTION | 既定値 | 説明 |
+| オプション | 既定値 | 説明 |
 | ------ | ------------- | ----------- |
 | `ApplicationMaxBufferSize` | 32 KB | クライアントから受信した、サーバーがバッファーする最大バイト数。 この値を大きくすると、サーバーはより大きなメッセージを受け取ることができますが、メモリの消費に悪影響を与える可能性があります。 |
 | `AuthorizationData` | ハブクラスに適用された @no__t 0 属性から自動的に収集されるデータ。 | クライアントがハブへの接続を承認されているかどうかを判断するために使用される[Iauthorizedata](/dotnet/api/microsoft.aspnetcore.authorization.iauthorizedata)オブジェクトの一覧。 |
@@ -234,13 +234,13 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 
 ロングポーリングトランスポートには、`LongPolling` プロパティを使用して構成できる追加のオプションがあります。
 
-| OPTION | 既定値 | 説明 |
+| オプション | 既定値 | 説明 |
 | ------ | ------------- | ----------- |
 | `PollTimeout` | 90秒 | 1回のポーリング要求を終了する前に、サーバーがクライアントへのメッセージ送信を待機する最大時間。 この値を小さくすると、クライアントは新しいポーリング要求をより頻繁に発行します。 |
 
 WebSocket トランスポートには、`WebSockets` プロパティを使用して構成できる追加のオプションがあります。
 
-| OPTION | 既定値 | 説明 |
+| オプション | 既定値 | 説明 |
 | ------ | ------------- | ----------- |
 | `CloseTimeout` | 5 秒 | サーバーが閉じられた後、この期間内にクライアントが閉じるのに失敗した場合、接続は終了します。 |
 | `SubProtocolSelector` | `null` | @No__t-0 ヘッダーをカスタム値に設定するために使用できるデリゲート。 デリゲートは、クライアントから要求された値を入力として受け取り、目的の値を返すことが想定されています。 |
@@ -413,7 +413,7 @@ HubConnection hubConnection = HubConnectionBuilder.create("https://example.com/m
 
 # <a name="nettabdotnet"></a>[.NET](#tab/dotnet)
 
-| OPTION | 既定値 | 説明 |
+| オプション | 既定値 | 説明 |
 | ------ | ------------- | ----------- |
 | `ServerTimeout` | 30秒 (3万ミリ秒) | サーバーの利用状況のタイムアウト。 サーバーがこの期間内にメッセージを送信しなかった場合、クライアントはサーバーを切断したと見なし、@no__t 0 イベント (JavaScript では `onclose`) をトリガーします。 この値は、ping メッセージをサーバーから送信**し**、タイムアウト間隔内にクライアントが受信するのに十分な大きさである必要があります。 推奨値は、少なくともサーバーの @no__t 0 の値で、ping が到着するまでの時間を指定します。 |
 | `HandshakeTimeout` | 15 秒 | 初期サーバーハンドシェイクのタイムアウト。 サーバーがこの間隔でハンドシェイク応答を送信しない場合、クライアントはハンドシェイクをキャンセルし、@no__t 0 イベント (JavaScript では `onclose`) をトリガーします。 これは、ネットワーク待ち時間が非常に長いためにハンドシェイクのタイムアウトエラーが発生している場合にのみ変更する必要がある詳細設定です。 ハンドシェイクプロセスの詳細については、 [SignalR Hub プロトコルの仕様](https://github.com/aspnet/SignalR/blob/master/specs/HubProtocol.md)を参照してください。 |
@@ -423,14 +423,14 @@ HubConnection hubConnection = HubConnectionBuilder.create("https://example.com/m
 
 # <a name="javascripttabjavascript"></a>[JavaScript](#tab/javascript)
 
-| OPTION | 既定値 | 説明 |
+| オプション | 既定値 | 説明 |
 | ------ | ------------- | ----------- |
 | `serverTimeoutInMilliseconds` | 30秒 (3万ミリ秒) | サーバーの利用状況のタイムアウト。 サーバーがこの間隔でメッセージを送信しなかった場合、クライアントはサーバーを切断したと見なし、@no__t 0 イベントをトリガーします。 この値は、ping メッセージをサーバーから送信**し**、タイムアウト間隔内にクライアントが受信するのに十分な大きさである必要があります。 推奨値は、少なくともサーバーの @no__t 0 の値で、ping が到着するまでの時間を指定します。 |
 | `keepAliveIntervalInMilliseconds` | 15秒 (15000 ミリ秒) | クライアントが ping メッセージを送信する間隔を決定します。 クライアントからメッセージを送信すると、タイマーが間隔の開始日にリセットされます。 クライアントがサーバーで設定された @no__t 0 のメッセージを送信していない場合、サーバーはクライアントを切断したと見なします。 |
 
 # <a name="javatabjava"></a>[Java](#tab/java)
 
-| OPTION | 既定値 | 説明 |
+| オプション | 既定値 | 説明 |
 | ------ | ------------- | ----------- |
 | `getServerTimeout` / `setServerTimeout` | 30秒 (3万ミリ秒) | サーバーの利用状況のタイムアウト。 サーバーがこの間隔でメッセージを送信しなかった場合、クライアントはサーバーを切断したと見なし、@no__t 0 イベントをトリガーします。 この値は、ping メッセージをサーバーから送信**し**、タイムアウト間隔内にクライアントが受信するのに十分な大きさである必要があります。 推奨値は、少なくともサーバーの @no__t 0 の値で、ping が到着するまでの時間を指定します。 |
 | `withHandshakeResponseTimeout` | 15 秒 | 初期サーバーハンドシェイクのタイムアウト。 サーバーがこの間隔でハンドシェイク応答を送信しない場合、クライアントはハンドシェイクをキャンセルし、@no__t 0 イベントをトリガーします。 これは、ネットワーク待ち時間が非常に長いためにハンドシェイクのタイムアウトエラーが発生している場合にのみ変更する必要がある詳細設定です。 ハンドシェイクプロセスの詳細については、 [SignalR Hub プロトコルの仕様](https://github.com/aspnet/SignalR/blob/master/specs/HubProtocol.md)を参照してください。 |
@@ -442,7 +442,7 @@ HubConnection hubConnection = HubConnectionBuilder.create("https://example.com/m
 
 # <a name="nettabdotnet"></a>[.NET](#tab/dotnet)
 
-| OPTION | 既定値 | 説明 |
+| オプション | 既定値 | 説明 |
 | ------ | ------------- | ----------- |
 | `ServerTimeout` | 30秒 (3万ミリ秒) | サーバーの利用状況のタイムアウト。 サーバーがこの期間内にメッセージを送信しなかった場合、クライアントはサーバーを切断したと見なし、@no__t 0 イベント (JavaScript では `onclose`) をトリガーします。 この値は、ping メッセージをサーバーから送信**し**、タイムアウト間隔内にクライアントが受信するのに十分な大きさである必要があります。 推奨値は、少なくともサーバーの @no__t 0 の値で、ping が到着するまでの時間を指定します。 |
 | `HandshakeTimeout` | 15 秒 | 初期サーバーハンドシェイクのタイムアウト。 サーバーがこの間隔でハンドシェイク応答を送信しない場合、クライアントはハンドシェイクをキャンセルし、@no__t 0 イベント (JavaScript では `onclose`) をトリガーします。 これは、ネットワーク待ち時間が非常に長いためにハンドシェイクのタイムアウトエラーが発生している場合にのみ変更する必要がある詳細設定です。 ハンドシェイクプロセスの詳細については、 [SignalR Hub プロトコルの仕様](https://github.com/aspnet/SignalR/blob/master/specs/HubProtocol.md)を参照してください。 |
@@ -451,13 +451,13 @@ HubConnection hubConnection = HubConnectionBuilder.create("https://example.com/m
 
 # <a name="javascripttabjavascript"></a>[JavaScript](#tab/javascript)
 
-| OPTION | 既定値 | 説明 |
+| オプション | 既定値 | 説明 |
 | ------ | ------------- | ----------- |
 | `serverTimeoutInMilliseconds` | 30秒 (3万ミリ秒) | サーバーの利用状況のタイムアウト。 サーバーがこの間隔でメッセージを送信しなかった場合、クライアントはサーバーを切断したと見なし、@no__t 0 イベントをトリガーします。 この値は、ping メッセージをサーバーから送信**し**、タイムアウト間隔内にクライアントが受信するのに十分な大きさである必要があります。 推奨値は、少なくともサーバーの @no__t 0 の値で、ping が到着するまでの時間を指定します。 |
 
 # <a name="javatabjava"></a>[Java](#tab/java)
 
-| OPTION | 既定値 | 説明 |
+| オプション | 既定値 | 説明 |
 | ------ | ------------- | ----------- |
 | `getServerTimeout` / `setServerTimeout` | 30秒 (3万ミリ秒) | サーバーの利用状況のタイムアウト。 サーバーがこの間隔でメッセージを送信しなかった場合、クライアントはサーバーを切断したと見なし、@no__t 0 イベントをトリガーします。 この値は、ping メッセージをサーバーから送信**し**、タイムアウト間隔内にクライアントが受信するのに十分な大きさである必要があります。 推奨値は、少なくともサーバーの @no__t 0 の値で、ping が到着するまでの時間を考慮した値です。 |
 | `withHandshakeResponseTimeout` | 15 秒 | 初期サーバーハンドシェイクのタイムアウト。 サーバーがこの間隔でハンドシェイク応答を送信しない場合、クライアントはハンドシェイクをキャンセルし、@no__t 0 イベントをトリガーします。 これは、ネットワーク待ち時間が非常に長いためにハンドシェイクのタイムアウトエラーが発生している場合にのみ変更する必要がある詳細設定です。 ハンドシェイクプロセスの詳細については、 [SignalR Hub プロトコルの仕様](https://github.com/aspnet/SignalR/blob/master/specs/HubProtocol.md)を参照してください。 |
