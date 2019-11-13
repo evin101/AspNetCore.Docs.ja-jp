@@ -27,7 +27,7 @@ gRPC メッセージは、HTTP/2 を使用して送受信されます。 次の�
 * [トランスポート層セキュリティ (TLS)](https://tools.ietf.org/html/rfc5246)を使用して、運用環境の grpc アプリでメッセージをセキュリティで保護します。
 * gRPC サービスは、セキュリティで保護されたポートをリッスンし、応答するだけです。
 
-TLS は Kestrel で構成されます。 Kestrel エンドポイントの構成の詳細については、「 [kestrel エンドポイントの構成](xref:fundamentals/servers/kestrel#endpoint-configuration)」を参照してください。
+TLS は Kestrel で構成されます。 Kestrel エンドポイントの構成の詳細については、「 [Kestrel エンドポイントの構成](xref:fundamentals/servers/kestrel#endpoint-configuration)」を参照してください。
 
 ## <a name="exceptions"></a>例外
 
