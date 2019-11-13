@@ -77,7 +77,7 @@ Kestrel は、最新のオペレーティングシステムで[HTTP/2 をサポ�
 
 #### <a name="tls"></a>TLS
 
-GRPC に使用される kestrel エンドポイントは、TLS を使用してセキュリティで保護する必要があります。 開発では、TLS を使用してセキュリティで保護`https://localhost:5001`されたエンドポイントは、ASP.NET Core 開発証明書が存在するときに、に自動的に作成されます。 構成は必要ありません。 `https`プレフィックスは、kestrel エンドポイントが TLS を使用していることを確認します。
+GRPC に使用される Kestrel エンドポイントは、TLS を使用してセキュリティで保護する必要があります。 開発では、TLS を使用してセキュリティで保護`https://localhost:5001`されたエンドポイントは、ASP.NET Core 開発証明書が存在するときに、に自動的に作成されます。 構成は必要ありません。 `https`プレフィックスは、Kestrel エンドポイントが TLS を使用していることを確認します。
 
 運用環境では、TLS を明示的に構成する必要があります。 次の*appsettings*の例では、TLS で保護された HTTP/2 エンドポイントが用意されています。
 
@@ -93,7 +93,7 @@ TLS は、通信のセキュリティ保護以外にも使用されます。 エ
 
 HTTP/2 エンドポイントが TLS を使用せずに構成されている場合は、エンドポイント`HttpProtocols.Http2`の[listenoptions](xref:fundamentals/servers/kestrel#listenoptionsprotocols)がに設定されている必要があります。 ネゴシエーションがないため、複数のプロトコル ( `HttpProtocols.Http1AndHttp2`たとえば、) を持つエンドポイントを TLS なしで使用することはできません。 セキュリティで保護されていないエンドポイントへのすべての接続は、既定で HTTP/1.1 に設定され、gRPC の呼び出しは失敗します。
 
-Kestrel での HTTP/2 および TLS の有効化の詳細については、「 [kestrel エンドポイントの構成](xref:fundamentals/servers/kestrel#endpoint-configuration)」を参照してください。
+Kestrel での HTTP/2 および TLS の有効化の詳細については、「 [Kestrel エンドポイントの構成](xref:fundamentals/servers/kestrel#endpoint-configuration)」を参照してください。
 
 > [!NOTE]
 > macOS の場合、ASP.NET Core gRPC と TLS の組み合わせに対応していません。 macOS で gRPC サービスを正常に実行するには、追加の構成が必要です。 詳細については、[macOS で ASP.NET Core gRPC アプリを起動できない](xref:grpc/troubleshoot#unable-to-start-aspnet-core-grpc-app-on-macos)場合に関するページを参照してください。
