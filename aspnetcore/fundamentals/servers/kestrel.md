@@ -31,7 +31,7 @@ Kestrel では、次のシナリオがサポートされます。
 
 &dagger;将来のリリースでは HTTP/2 が macOS 上でサポートされるようになります。
 
-kestrel は、.NET Core がサポートするすべてのプラットフォームおよびバージョンでサポートされます。
+Kestrel は、.NET Core がサポートするすべてのプラットフォームおよびバージョンでサポートされます。
 
 [サンプル コードを表示またはダウンロード](https://github.com/aspnet/AspNetCore.Docs/tree/master/aspnetcore/fundamentals/servers/kestrel/samples)します ([ダウンロード方法](xref:index#how-to-download-a-sample))。
 
@@ -222,7 +222,7 @@ public IActionResult MyActionMethod()
 <xref:Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerLimits.MinRequestBodyDataRate>
 <xref:Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerLimits.MinResponseDataRate>
 
-kestrel はデータが指定のレート (バイト数/秒) で到着しているかどうかを毎秒チェックします。 レートが最小値を下回った場合は接続がタイムアウトになります。猶予期間とは、クライアントによって送信速度を最低ラインまで引き上げられるのを、Kestrel が待機する時間のことです。この期間中、レートはチェックされません。 猶予期間により、TCP のスロースタートのため最初にデータを低速で送信する接続がドロップされるのを回避できます。
+Kestrel はデータが指定のレート (バイト数/秒) で到着しているかどうかを毎秒チェックします。 レートが最小値を下回った場合は接続がタイムアウトになります。猶予期間とは、クライアントによって送信速度を最低ラインまで引き上げられるのを、Kestrel が待機する時間のことです。この期間中、レートはチェックされません。 猶予期間により、TCP のスロースタートのため最初にデータを低速で送信する接続がドロップされるのを回避できます。
 
 既定の最小レートは 240 バイト/秒であり、5 秒の猶予時間が設定されています。
 
@@ -883,7 +883,7 @@ Libuv (<xref:Microsoft.AspNetCore.Hosting.WebHostBuilderLibuvExtensions.UseLibuv
 
 `UseUrls`、`--urls` コマンドライン引数、`urls` ホスト構成キー、または `ASPNETCORE_URLS` 環境変数を使用する場合、URL プレフィックスは次のいずれかの形式となります。
 
-HTTP URL プレフィックスのみが有効です。 `UseUrls` を使用して URL バインドを構成する場合、kestrel は HTTPS をサポートしません。
+HTTP URL プレフィックスのみが有効です。 `UseUrls` を使用して URL バインドを構成する場合、Kestrel は HTTPS をサポートしません。
 
 * IPv4 アドレスとポート番号
 
@@ -961,7 +961,7 @@ Kestrel では、次のシナリオがサポートされます。
 
 &dagger;将来のリリースでは HTTP/2 が macOS 上でサポートされるようになります。
 
-kestrel は、.NET Core がサポートするすべてのプラットフォームおよびバージョンでサポートされます。
+Kestrel は、.NET Core がサポートするすべてのプラットフォームおよびバージョンでサポートされます。
 
 [サンプル コードを表示またはダウンロード](https://github.com/aspnet/AspNetCore.Docs/tree/master/aspnetcore/fundamentals/servers/kestrel/samples)します ([ダウンロード方法](xref:index#how-to-download-a-sample))。
 
@@ -1167,7 +1167,7 @@ public IActionResult MyActionMethod()
 <xref:Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerLimits.MinRequestBodyDataRate>
 <xref:Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerLimits.MinResponseDataRate>
 
-kestrel はデータが指定のレート (バイト数/秒) で到着しているかどうかを毎秒チェックします。 レートが最小値を下回った場合は接続がタイムアウトになります。猶予期間とは、クライアントによって送信速度を最低ラインまで引き上げられるのを、Kestrel が待機する時間のことです。この期間中、レートはチェックされません。 猶予期間により、TCP のスロースタートのため最初にデータを低速で送信する接続がドロップされるのを回避できます。
+Kestrel はデータが指定のレート (バイト数/秒) で到着しているかどうかを毎秒チェックします。 レートが最小値を下回った場合は接続がタイムアウトになります。猶予期間とは、クライアントによって送信速度を最低ラインまで引き上げられるのを、Kestrel が待機する時間のことです。この期間中、レートはチェックされません。 猶予期間により、TCP のスロースタートのため最初にデータを低速で送信する接続がドロップされるのを回避できます。
 
 既定の最小レートは 240 バイト/秒であり、5 秒の猶予時間が設定されています。
 
@@ -1809,7 +1809,7 @@ Libuv を使用する必要のあるプロジェクトの場合
 
 `UseUrls`、`--urls` コマンドライン引数、`urls` ホスト構成キー、または `ASPNETCORE_URLS` 環境変数を使用する場合、URL プレフィックスは次のいずれかの形式となります。
 
-HTTP URL プレフィックスのみが有効です。 `UseUrls` を使用して URL バインドを構成する場合、kestrel は HTTPS をサポートしません。
+HTTP URL プレフィックスのみが有効です。 `UseUrls` を使用して URL バインドを構成する場合、Kestrel は HTTPS をサポートしません。
 
 * IPv4 アドレスとポート番号
 
@@ -1884,7 +1884,7 @@ Kestrel では、次のシナリオがサポートされます。
 * [WebSocket](https://github.com/aspnet/websockets) を有効にするために使用される非透過的なアップグレード
 * Nginx の背後にある高パフォーマンスの UNIX ソケット
 
-kestrel は、.NET Core がサポートするすべてのプラットフォームおよびバージョンでサポートされます。
+Kestrel は、.NET Core がサポートするすべてのプラットフォームおよびバージョンでサポートされます。
 
 [サンプル コードを表示またはダウンロード](https://github.com/aspnet/AspNetCore.Docs/tree/master/aspnetcore/fundamentals/servers/kestrel/samples)します ([ダウンロード方法](xref:index#how-to-download-a-sample))。
 
@@ -2082,7 +2082,7 @@ public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
 <xref:Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerLimits.MinRequestBodyDataRate>
 <xref:Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerLimits.MinResponseDataRate>
 
-kestrel はデータが指定のレート (バイト数/秒) で到着しているかどうかを毎秒チェックします。 レートが最小値を下回った場合は接続がタイムアウトになります。猶予期間とは、クライアントによって送信速度を最低ラインまで引き上げられるのを、Kestrel が待機する時間のことです。この期間中、レートはチェックされません。 猶予期間により、TCP のスロースタートのため最初にデータを低速で送信する接続がドロップされるのを回避できます。
+Kestrel はデータが指定のレート (バイト数/秒) で到着しているかどうかを毎秒チェックします。 レートが最小値を下回った場合は接続がタイムアウトになります。猶予期間とは、クライアントによって送信速度を最低ラインまで引き上げられるのを、Kestrel が待機する時間のことです。この期間中、レートはチェックされません。 猶予期間により、TCP のスロースタートのため最初にデータを低速で送信する接続がドロップされるのを回避できます。
 
 既定の最小レートは 240 バイト/秒であり、5 秒の猶予時間が設定されています。
 
@@ -2575,7 +2575,7 @@ Libuv を使用する必要のあるプロジェクトの場合
 
 `UseUrls`、`--urls` コマンドライン引数、`urls` ホスト構成キー、または `ASPNETCORE_URLS` 環境変数を使用する場合、URL プレフィックスは次のいずれかの形式となります。
 
-HTTP URL プレフィックスのみが有効です。 `UseUrls` を使用して URL バインドを構成する場合、kestrel は HTTPS をサポートしません。
+HTTP URL プレフィックスのみが有効です。 `UseUrls` を使用して URL バインドを構成する場合、Kestrel は HTTPS をサポートしません。
 
 * IPv4 アドレスとポート番号
 
