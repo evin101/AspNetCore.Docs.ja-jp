@@ -18,17 +18,17 @@ ms.locfileid: "73905719"
 ---
 # <a name="aspnet-core-opno-locsignalr-hosting-and-scaling"></a>ASP.NET Core SignalR のホストとスケーリング
 
-作成者: [Andrew](https://twitter.com/anurse)、 [Brady](https://twitter.com/bradygaster)、および[Tom Dykstra](https://github.com/tdykstra)
+作成者: [Andrew Stanton-Nurse](https://twitter.com/anurse)、 [Brady Gaster](https://twitter.com/bradygaster)、および[Tom Dykstra](https://github.com/tdykstra)
 
 この記事では、ASP.NET Core SignalRを使用する高トラフィックアプリのホストとスケーリングに関する考慮事項について説明します。
 
 ## <a name="sticky-sessions"></a>固定セッション
 
-SignalR では、特定の接続に対するすべての HTTP 要求を同じサーバープロセスで処理する必要があります。 サーバーファーム (複数のサーバー) で SignalR が実行されている場合は、"固定セッション" を使用する必要があります。 "固定セッション" は、一部のロードバランサーによってセッションアフィニティとも呼ばれます。 Azure App Service は、[アプリケーション要求ルーティング](https://docs.microsoft.com/iis/extensions/planning-for-arr/application-request-routing-version-2-overview)処理 (ARR) を使用して要求をルーティングします。 Azure App Service で "ARR Affinity" 設定を有効にすると、"固定セッション" が有効になります。 固定セッションが不要な状況は次のとおりです。
+SignalR では、特定の接続に対するすべての HTTP 要求を同じサーバープロセスで処理する必要があります。 サーバーファーム (複数のサーバー) で SignalR が実行されている場合は、"固定セッション" を使用する必要があります。 "固定セッション" は、一部のロードバランサーによってセッションアフィニティとも呼ばれます。 Azure App Service は、[Application Request Routing](https://docs.microsoft.com/iis/extensions/planning-for-arr/application-request-routing-version-2-overview)処理 (ARR) を使用して要求をルーティングします。 Azure App Service で "ARR Affinity" 設定を有効にすると、"固定セッション" が有効になります。 固定セッションが不要な状況は次のとおりです。
 
-1. 単一のサーバーでホストする場合、1つのプロセスで実行します。
-1. Azure SignalR サービスを使用する場合。
-1. すべてのクライアントが WebSocket**のみ**を使用するように構成され、 [skipnegotiation 設定](xref:signalr/configuration#configure-additional-options)がクライアント構成で有効に**なっている**場合。
+1. 単一のサーバー、単一のプロセスでホストされる場合。
+1. Azure SignalR Serviceを使用する場合。
+1. すべてのクライアントが WebSocket**のみ**を使用するように構成され、 [SkipNegotiation 設定](xref:signalr/configuration#configure-additional-options)がクライアント構成で有効に**なっている**場合。
 
 その他のすべての状況 (Redis バックプレーンを使用する場合を含む) では、サーバー環境を固定セッション用に構成する必要があります。
 
