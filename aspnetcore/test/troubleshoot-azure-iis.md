@@ -69,7 +69,7 @@ The Web server is configured to not list the contents of this directory.
 1. Visual Studio、PowerShell、手動デプロイなどの通常のデプロイ方法を使用して、アプリの*publish*フォルダーの内容をホスティングシステムに再デプロイします。
    * 配置に web.config*ファイルが*存在し、その内容が正しいことを確認します。
    * Azure App Service でホストする場合は、アプリが`D:\home\site\wwwroot`フォルダーに展開されていることを確認します。
-   * アプリが IIS によってホストされている場合は、iis**マネージャー**の **[基本設定]** に表示されている iis の**物理パス**にアプリが展開されていることを確認します。
+   * アプリが IIS によってホストされている場合は、IIS**マネージャー**の **[基本設定]** に表示されている IIS の**物理パス**にアプリが展開されていることを確認します。
 1. ホスティングシステムの配置をプロジェクトの*publish*フォルダーの内容と比較することによって、アプリのすべてのファイルとフォルダーが展開されていることを確認します。
 
 発行された ASP.NET Core アプリのレイアウトの詳細について<xref:host-and-deploy/directory-structure>は、「」を参照してください。 *Web.config ファイルの*詳細については、「」 <xref:host-and-deploy/aspnet-core-module#configuration-with-webconfig>を参照してください。
