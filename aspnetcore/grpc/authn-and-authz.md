@@ -1,7 +1,7 @@
 ---
-title: GRPC での認証と承認 (ASP.NET Core)
+title: gRPC での認証と承認 (ASP.NET Core)
 author: jamesnk
-description: GRPC で認証と承認を使用して ASP.NET Core する方法について説明します。
+description: gRPC で認証と承認を使用して ASP.NET Core する方法について説明します。
 monikerRange: '>= aspnetcore-3.0'
 ms.author: jamesnk
 ms.date: 08/13/2019
@@ -23,7 +23,7 @@ ms.locfileid: "71999862"
 
 gRPC を[ASP.NET Core 認証](xref:security/authentication/identity)と共に使用すると、ユーザーを各呼び出しに関連付けることができます。
 
-GRPC と ASP.NET Core 認証を使用する @no__t 0 の例を次に示します。
+gRPC と ASP.NET Core 認証を使用する @no__t 0 の例を次に示します。
 
 ```csharp
 public void Configure(IApplicationBuilder app)
@@ -136,7 +136,7 @@ public Ticketer.TicketerClient CreateClientWithCert(
 
 ### <a name="other-authentication-mechanisms"></a>その他の認証メカニズム
 
-GRPC では、ASP.NET Core サポートされている多くの認証メカニズムが使用できます。
+gRPC では、ASP.NET Core サポートされている多くの認証メカニズムが使用できます。
 
 * Azure Active Directory
 * クライアント証明書
@@ -148,7 +148,7 @@ GRPC では、ASP.NET Core サポートされている多くの認証メカニ�
 
 サーバーでの認証の構成の詳細については、「 [ASP.NET Core 認証](xref:security/authentication/identity)」を参照してください。
 
-認証を使用するように gRPC クライアントを構成することは、使用している認証メカニズムによって異なります。 前のベアラートークンとクライアント証明書の例では、grpc 呼び出しを使用して認証メタデータを送信するように gRPC クライアントを構成するいくつかの方法を示しています。
+認証を使用するように gRPC クライアントを構成することは、使用している認証メカニズムによって異なります。 前のベアラートークンとクライアント証明書の例では、gRPC 呼び出しを使用して認証メタデータを送信するように gRPC クライアントを構成するいくつかの方法を示しています。
 
 * 厳密に型指定された gRPC クライアントは @no__t 0 を内部的に使用します。 認証は[`HttpClientHandler`](/dotnet/api/system.net.http.httpclienthandler)で構成することも、`HttpClient` にカスタム[の @no__t](/dotnet/api/system.net.http.httpmessagehandler)インスタンスを追加することによって構成することもできます。
 * 各 gRPC 呼び出しには、省略可能な @no__t 0 引数があります。 カスタムヘッダーは、オプションの headers コレクションを使用して送信できます。

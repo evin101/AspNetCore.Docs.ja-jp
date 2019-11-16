@@ -1,5 +1,5 @@
 ---
-title: GRPC サービスの C-core から ASP.NET Core への移行
+title: gRPC サービスの C-core から ASP.NET Core への移行
 author: juntaoluo
 description: 既存の C コアベースの gRPC アプリを移動して ASP.NET Core スタック上で実行する方法について説明します。
 monikerRange: '>= aspnetcore-3.0'
@@ -33,7 +33,7 @@ ASP.NET Core スタックでは、既定で gRPC サービスが[スコープ有
 
 ### <a name="add-a-singleton-service"></a>シングルトンサービスを追加する
 
-GRPC C コア実装から ASP.NET Core への移行を容易にするために、サービス実装のサービスの有効期間をスコープからシングルトンに変更することができます。 これには、サービス実装のインスタンスを DI コンテナーに追加する必要があります。
+gRPC C コア実装から ASP.NET Core への移行を容易にするために、サービス実装のサービスの有効期間をスコープからシングルトンに変更することができます。 これには、サービス実装のインスタンスを DI コンテナーに追加する必要があります。
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -82,7 +82,7 @@ C コアベースのアプリは、 [Server. Ports プロパティ](https://grpc
 
 ## <a name="grpc-interceptors-vs-middleware"></a>gRPC インターセプターとミドルウェア
 
-ASP.NET Core[ミドルウェア](xref:fundamentals/middleware/index)は、C コアベースの grpc アプリのインターセプターと比較して同様の機能を提供します。 ASP.NET Core ミドルウェアとインターセプターは概念的に似ています。 両方とも：
+ASP.NET Core[ミドルウェア](xref:fundamentals/middleware/index)は、C コアベースの gRPC アプリのインターセプターと比較して同様の機能を提供します。 ASP.NET Core ミドルウェアとインターセプターは概念的に似ています。 両方とも：
 
 * は、gRPC 要求を処理するパイプラインを構築するために使用されます。
 * パイプライン内の次のコンポーネントの前または後に作業を実行することを許可します。
@@ -93,12 +93,12 @@ ASP.NET Core[ミドルウェア](xref:fundamentals/middleware/index)は、C コ�
 gRPC インターセプターと ASP.NET Core ミドルウェアの違い:
 
 * インターセプター
-  * [ServerCallContext](https://grpc.io/grpc/csharp/api/Grpc.Core.ServerCallContext.html)を使用して、抽象化の grpc レイヤーを操作します。
+  * [ServerCallContext](https://grpc.io/grpc/csharp/api/Grpc.Core.ServerCallContext.html)を使用して、抽象化の gRPC レイヤーを操作します。
   * 次へのアクセスを提供します。
     * 呼び出しに送信された逆シリアル化されたメッセージ。
     * シリアル化される前に、呼び出しから返されるメッセージ。
 * ミドルウェア
-  * GRPC インターセプターの前に実行されます。
+  * gRPC インターセプターの前に実行されます。
   * は、基になる HTTP/2 メッセージを操作します。
   * は、要求ストリームと応答ストリームからのみバイトにアクセスできます。
 

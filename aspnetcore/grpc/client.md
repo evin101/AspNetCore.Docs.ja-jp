@@ -15,16 +15,16 @@ ms.locfileid: "71011144"
 ---
 # <a name="call-grpc-services-with-the-net-client"></a>.NET クライアントを使用して gRPC サービスを呼び出す
 
-.NET gRPC クライアントライブラリは、 [grpc .net. クライアント](https://www.nuget.org/packages/Grpc.Net.Client)NuGet パッケージで入手できます。 このドキュメントでは、次の方法について説明します。
+.NET gRPC クライアントライブラリは、 [gRPC .net. クライアント](https://www.nuget.org/packages/Grpc.Net.Client)NuGet パッケージで入手できます。 このドキュメントでは、次の方法について説明します。
 
-* Grpc サービスを呼び出すように gRPC クライアントを構成します。
-* GRPC に対して、単項、サーバーストリーミング、クライアントストリーミング、および双方向のストリーミングメソッドを呼び出します。
+* gRPC サービスを呼び出すように gRPC クライアントを構成します。
+* gRPC に対して、単項、サーバーストリーミング、クライアントストリーミング、および双方向のストリーミングメソッドを呼び出します。
 
 ## <a name="configure-grpc-client"></a>GRPC クライアントを構成する
 
-grpc クライアントは、 [  *\*プロトコル*ファイルから生成](xref:grpc/basics#generated-c-assets)される具象クライアントの種類です。 具象 grpc クライアントには、  *\*proto*ファイルの grpc サービスに変換するメソッドがあります。
+gRPC クライアントは、 [  *\*プロトコル*ファイルから生成](xref:grpc/basics#generated-c-assets)される具象クライアントの種類です。 具象 gRPC クライアントには、  *\*proto*ファイルの gRPC サービスに変換するメソッドがあります。
 
-GRPC クライアントは、チャネルから作成されます。 まずを使用`GrpcChannel.ForAddress`してチャネルを作成し、次にチャネルを使用して grpc クライアントを作成します。
+gRPC クライアントは、チャネルから作成されます。 まずを使用`GrpcChannel.ForAddress`してチャネルを作成し、次にチャネルを使用して gRPC クライアントを作成します。
 
 ```csharp
 var channel = GrpcChannel.ForAddress("https://localhost:5001");
@@ -44,16 +44,16 @@ var counterClient = new Count.CounterClient(channel);
 // Use clients to call gRPC services
 ```
 
-`GrpcChannel.ForAddress`gRPC クライアントを作成するための唯一のオプションではありません。 ASP.NET Core アプリから gRPC サービスを呼び出す場合は、 [grpc クライアントファクトリの統合](xref:grpc/clientfactory)を検討してください。 grpc との`HttpClientFactory`統合には、grpc クライアントを作成するための一元化された代替手段が用意されています。
+`GrpcChannel.ForAddress`gRPC クライアントを作成するための唯一のオプションではありません。 ASP.NET Core アプリから gRPC サービスを呼び出す場合は、 [gRPC クライアントファクトリの統合](xref:grpc/clientfactory)を検討してください。 gRPC との`HttpClientFactory`統合には、gRPC クライアントを作成するための一元化された代替手段が用意されています。
 
 > [!NOTE]
 > [.Net クライアントでセキュリティで保護されていない gRPC サービスを呼び出す](xref:grpc/troubleshoot#call-insecure-grpc-services-with-net-core-client)には、追加の構成が必要です。
 
 ## <a name="make-grpc-calls"></a>GRPC 呼び出しを行う
 
-GRPC 呼び出しは、クライアントでメソッドを呼び出すことによって開始されます。 GRPC クライアントは、メッセージのシリアル化を処理し、適切なサービスに対する gRPC 呼び出しに対処します。
+gRPC 呼び出しは、クライアントでメソッドを呼び出すことによって開始されます。 gRPC クライアントは、メッセージのシリアル化を処理し、適切なサービスに対する gRPC 呼び出しに対処します。
 
-gRPC には、さまざまな種類のメソッドがあります。 クライアントを使用して gRPC 呼び出しを行う方法は、呼び出すメソッドの種類によって異なります。 GRPC のメソッドの種類は次のとおりです。
+gRPC には、さまざまな種類のメソッドがあります。 クライアントを使用して gRPC 呼び出しを行う方法は、呼び出すメソッドの種類によって異なります。 gRPC のメソッドの種類は次のとおりです。
 
 * 単項
 * サーバーストリーミング
@@ -72,7 +72,7 @@ Console.WriteLine("Greeting: " + response.Message);
 // Greeting: Hello World
 ```
 
-*\*Proto*ファイルの各単項サービスメソッドは、メソッドを呼び出すための具象 grpc クライアント型に対して、非同期メソッドとブロッキングメソッドの2つの .net メソッドを生成します。 たとえば、を呼び出す`GreeterClient` `SayHello`には、次の2つの方法があります。
+*\*Proto*ファイルの各単項サービスメソッドは、メソッドを呼び出すための具象 gRPC クライアント型に対して、非同期メソッドとブロッキングメソッドの2つの .net メソッドを生成します。 たとえば、を呼び出す`GreeterClient` `SayHello`には、次の2つの方法があります。
 
 * `GreeterClient.SayHelloAsync`-サービス`Greeter.SayHello`を非同期的に呼び出します。 待機することができます。
 * `GreeterClient.SayHello`-サービス`Greeter.SayHello`を呼び出し、が完了するまでブロックします。 非同期コードでは使用しないでください。

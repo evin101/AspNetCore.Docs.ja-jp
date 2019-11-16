@@ -1,7 +1,7 @@
 ---
-title: GRPC での ASP.NET Core のセキュリティに関する考慮事項
+title: gRPC での ASP.NET Core のセキュリティに関する考慮事項
 author: jamesnk
-description: GRPC for ASP.NET Core のセキュリティに関する考慮事項について説明します。
+description: gRPC for ASP.NET Core のセキュリティに関する考慮事項について説明します。
 monikerRange: '>= aspnetcore-3.0'
 ms.author: jamesnk
 ms.custom: mvc
@@ -24,7 +24,7 @@ ms.locfileid: "70310367"
 
 gRPC メッセージは、HTTP/2 を使用して送受信されます。 次のことをお勧めします。
 
-* [トランスポート層セキュリティ (TLS)](https://tools.ietf.org/html/rfc5246)を使用して、運用環境の grpc アプリでメッセージをセキュリティで保護します。
+* [トランスポート層セキュリティ (TLS)](https://tools.ietf.org/html/rfc5246)を使用して、運用環境の gRPC アプリでメッセージをセキュリティで保護します。
 * gRPC サービスは、セキュリティで保護されたポートをリッスンし、応答するだけです。
 
 TLS は Kestrel で構成されます。 Kestrel エンドポイントの構成の詳細については、「 [kestrel エンドポイントの構成](xref:fundamentals/servers/kestrel#endpoint-configuration)」を参照してください。
@@ -35,11 +35,11 @@ TLS は Kestrel で構成されます。 Kestrel エンドポイントの構成�
 
 ## <a name="message-size-limits"></a>メッセージサイズの制限
 
-GRPC クライアントおよびサービスへの着信メッセージは、メモリに読み込まれます。 メッセージサイズの制限は、gRPC が過剰なリソースを消費しないようにするためのメカニズムです。
+gRPC クライアントおよびサービスへの着信メッセージは、メモリに読み込まれます。 メッセージサイズの制限は、gRPC が過剰なリソースを消費しないようにするためのメカニズムです。
 
 gRPC では、メッセージごとのサイズ制限を使用して、受信メッセージと送信メッセージを管理します。 既定では、gRPC は受信メッセージを 4 MB に制限します。 送信メッセージに制限はありません。
 
-サーバーでは、次のように`AddGrpc`して、アプリケーションのすべてのサービスに対して grpc メッセージ制限を構成できます。
+サーバーでは、次のように`AddGrpc`して、アプリケーションのすべてのサービスに対して gRPC メッセージ制限を構成できます。
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -52,7 +52,7 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 
-また、を使用し`AddServiceOptions<TService>`て、個々のサービスに対して制限を構成することもできます。 メッセージサイズの制限の構成の詳細については、「 [Grpc の構成](xref:grpc/configuration)」を参照してください。
+また、を使用し`AddServiceOptions<TService>`て、個々のサービスに対して制限を構成することもできます。 メッセージサイズの制限の構成の詳細については、「 [gRPC の構成](xref:grpc/configuration)」を参照してください。
 
 ## <a name="client-certificate-validation"></a>クライアント証明書の検証
 

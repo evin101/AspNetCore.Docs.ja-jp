@@ -15,13 +15,13 @@ ms.locfileid: "71925183"
 ---
 # <a name="grpc-services-with-c"></a>gRPC サービスと C\#
 
-このドキュメントでは、でC# [grpc](https://grpc.io/docs/guides/)アプリを作成するために必要な概念の概要を説明します。 ここで説明するトピックは、 [C コア](https://grpc.io/blog/grpc-stacks)ベースと ASP.NET Core ベースの grpc アプリの両方に適用されます。
+このドキュメントでは、でC# [gPRC](https://grpc.io/docs/guides/)アプリを作成するために必要な概念の概要を説明します。 ここで説明するトピックは、 [C コア](https://grpc.io/blog/grpc-stacks)ベースと ASP.NET Core ベースの gRPC アプリの両方に適用されます。
 
 ## <a name="proto-file"></a>プロトコルファイル
 
 gRPC では、API 開発に対してコントラクト優先のアプローチが使われます。 プロトコルバッファー (protobuf) は、既定ではインターフェイスデザイン言語 (IDL) として使用されます。 *@No__t の-1*ファイルには次のものが含まれます。
 
-* GRPC サービスの定義。
+* gRPC サービスの定義。
 * クライアントとサーバーの間で送信されるメッセージ。
 
 Protobuf ファイルの構文の詳細については、[公式のドキュメント (protobuf)](https://developers.google.com/protocol-buffers/docs/proto3)を参照してください。
@@ -52,7 +52,7 @@ Protobuf ファイルの構文の詳細については、[公式のドキュメ�
 
 [!code-xml[](~/tutorials/grpc/grpc-start/sample/GrpcGreeter/GrpcGreeter.csproj?highlight=1&range=12)]
 
-クライアントプロジェクトは、grpc クライアントを使用するために必要な他のパッケージと一緒に直接参照`Grpc.Tools`する必要があります。 ツールパッケージは実行時に必須ではないため、依存関係`PrivateAssets="All"`は次のようにマークされます。
+クライアントプロジェクトは、gRPC クライアントを使用するために必要な他のパッケージと一緒に直接参照`Grpc.Tools`する必要があります。 ツールパッケージは実行時に必須ではないため、依存関係`PrivateAssets="All"`は次のようにマークされます。
 
 [!code-xml[](~/tutorials/grpc/grpc-start/sample/GrpcGreeterClient/GrpcGreeterClient.csproj?highlight=3&range=9-11)]
 
@@ -60,11 +60,11 @@ Protobuf ファイルの構文の詳細については、[公式のドキュメ�
 
 ツールパッケージは、含まC#れている *\** ファイルで定義されているメッセージを表す型を生成します。
 
-サーバー側アセットの場合、抽象サービスの基本型が生成されます。 基本型には、 *proto*ファイルに含まれるすべての grpc 呼び出しの定義が含まれています。 この基本型から派生し、gRPC 呼び出しのロジックを実装する具象サービス実装を作成します。 では、前に説明した例で`GreeterBase`は、仮想`SayHello`メソッドを含む抽象型が生成されます。 `greet.proto` 具象実装`GreeterService`は、メソッドをオーバーライドし、grpc 呼び出しを処理するロジックを実装します。
+サーバー側アセットの場合、抽象サービスの基本型が生成されます。 基本型には、 *proto*ファイルに含まれるすべての gRPC 呼び出しの定義が含まれています。 この基本型から派生し、gRPC 呼び出しのロジックを実装する具象サービス実装を作成します。 では、前に説明した例で`GreeterBase`は、仮想`SayHello`メソッドを含む抽象型が生成されます。 `greet.proto` 具象実装`GreeterService`は、メソッドをオーバーライドし、gRPC 呼び出しを処理するロジックを実装します。
 
 [!code-csharp[](~/tutorials/grpc/grpc-start/sample/GrpcGreeter/Services/GreeterService.cs?name=snippet)]
 
-クライアント側の資産の場合は、具象的なクライアントの種類が生成されます。 *Proto*ファイル内の grpc 呼び出しは、具象型のメソッドに変換されます。これは、を呼び出すことができます。 前に説明した例では、具象`GreeterClient`型が生成されています。 `greet.proto` を`GreeterClient.SayHelloAsync`呼び出して、サーバーに対する grpc 呼び出しを開始します。
+クライアント側の資産の場合は、具象的なクライアントの種類が生成されます。 *Proto*ファイル内の gRPC 呼び出しは、具象型のメソッドに変換されます。これは、を呼び出すことができます。 前に説明した例では、具象`GreeterClient`型が生成されています。 `greet.proto` を`GreeterClient.SayHelloAsync`呼び出して、サーバーに対する gRPC 呼び出しを開始します。
 
 [!code-csharp[](~/tutorials/grpc/grpc-start/sample/GrpcGreeterClient/Program.cs?name=snippet)]
 

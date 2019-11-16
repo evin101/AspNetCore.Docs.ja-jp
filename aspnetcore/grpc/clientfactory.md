@@ -17,7 +17,7 @@ ms.locfileid: "73963679"
 ---
 # <a name="grpc-client-factory-integration-in-net-core"></a>.NET Core での gRPC クライアントファクトリの統合
 
-gRPC と `HttpClientFactory` の統合には、gRPC クライアントを一元的に作成する方法が用意されています。 [スタンドアロンの gRPC クライアントインスタンスを構成](xref:grpc/client)する代わりに使用することもできます。 ファクトリ統合は、 [Grpc .net. ClientFactory](https://www.nuget.org/packages/Grpc.Net.ClientFactory) NuGet パッケージで使用できます。
+gRPC と `HttpClientFactory` の統合には、gRPC クライアントを一元的に作成する方法が用意されています。 [スタンドアロンの gRPC クライアントインスタンスを構成](xref:grpc/client)する代わりに使用することもできます。 ファクトリ統合は、 [gRPC .net. ClientFactory](https://www.nuget.org/packages/Grpc.Net.ClientFactory) NuGet パッケージで使用できます。
 
 ファクトリには、次のような利点があります。
 
@@ -27,7 +27,7 @@ gRPC と `HttpClientFactory` の統合には、gRPC クライアントを一元�
 
 ## <a name="register-grpc-clients"></a>GRPC クライアントの登録
 
-GRPC クライアントを登録するには、`Startup.ConfigureServices`内で汎用 `AddGrpcClient` 拡張メソッドを使用し、gRPC で型指定されたクライアントクラスとサービスアドレスを指定します。
+gRPC クライアントを登録するには、`Startup.ConfigureServices`内で汎用 `AddGrpcClient` 拡張メソッドを使用し、gRPC で型指定されたクライアントクラスとサービスアドレスを指定します。
 
 ```csharp
 services.AddGrpcClient<Greeter.GreeterClient>(o =>
@@ -36,7 +36,7 @@ services.AddGrpcClient<Greeter.GreeterClient>(o =>
 });
 ```
 
-GRPC クライアントの種類は、依存関係の注入 (DI) と共に一時的に登録されます。 これで、クライアントを DI によって作成された型に直接挿入して使用できるようになりました。 ASP.NET Core MVC コントローラー、SignalR ハブ、および gRPC サービスは、gRPC クライアントが自動的に挿入される場所です。
+gRPC クライアントの種類は、依存関係の注入 (DI) と共に一時的に登録されます。 これで、クライアントを DI によって作成された型に直接挿入して使用できるようになりました。 ASP.NET Core MVC コントローラー、SignalR ハブ、および gRPC サービスは、gRPC クライアントが自動的に挿入される場所です。
 
 ```csharp
 public class AggregatorService : Aggregator.AggregatorBase
@@ -87,8 +87,8 @@ services
 
 gRPC 固有のメソッドは、次の目的で使用できます。
 
-* GRPC クライアントの基になるチャネルを構成します。
-* GRPC 呼び出しを行うときにクライアントが使用する `Interceptor` インスタンスを追加します。
+* gRPC クライアントの基になるチャネルを構成します。
+* gRPC 呼び出しを行うときにクライアントが使用する `Interceptor` インスタンスを追加します。
 
 ```csharp
 services

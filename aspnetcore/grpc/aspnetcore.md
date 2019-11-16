@@ -39,7 +39,7 @@ ms.locfileid: "71925061"
 
 # <a name="visual-studiotabvisual-studio"></a>[Visual Studio](#tab/visual-studio)
 
-GRPC プロジェクトを作成する方法の詳細については、「 [grpc サービスの概要](xref:tutorials/grpc/grpc-start)」を参照してください。
+gRPC プロジェクトを作成する方法の詳細については、「 [gRPC サービスの概要](xref:tutorials/grpc/grpc-start)」を参照してください。
 
 # <a name="visual-studio-code--visual-studio-for-mactabvisual-studio-codevisual-studio-mac"></a>[Visual Studio Code / Visual Studio for Mac](#tab/visual-studio-code+visual-studio-mac)
 
@@ -55,8 +55,8 @@ gRPC には[AspNetCore](https://www.nuget.org/packages/Grpc.AspNetCore)パッケ
 
 *Startup.cs* の場合:
 
-* grpc は、 `AddGrpc`メソッドを使用して有効になっています。
-* 各 grpc サービスは、メソッドを`MapGrpcService`使用してルーティングパイプラインに追加されます。
+* gRPC は、 `AddGrpc`メソッドを使用して有効になっています。
+* 各 gRPC サービスは、メソッドを`MapGrpcService`使用してルーティングパイプラインに追加されます。
 
 [!code-csharp[](~/tutorials/grpc/grpc-start/sample/GrpcGreeter/Startup.cs?name=snippet&highlight=7,24)]
 
@@ -77,7 +77,7 @@ Kestrel は、最新のオペレーティングシステムで[HTTP/2 をサポ�
 
 #### <a name="tls"></a>TLS
 
-GRPC に使用される kestrel エンドポイントは、TLS を使用してセキュリティで保護する必要があります。 開発では、TLS を使用してセキュリティで保護`https://localhost:5001`されたエンドポイントは、ASP.NET Core 開発証明書が存在するときに、に自動的に作成されます。 構成は必要ありません。 `https`プレフィックスは、kestrel エンドポイントが TLS を使用していることを確認します。
+gRPC に使用される kestrel エンドポイントは、TLS を使用してセキュリティで保護する必要があります。 開発では、TLS を使用してセキュリティで保護`https://localhost:5001`されたエンドポイントは、ASP.NET Core 開発証明書が存在するときに、に自動的に作成されます。 構成は必要ありません。 `https`プレフィックスは、kestrel エンドポイントが TLS を使用していることを確認します。
 
 運用環境では、TLS を明示的に構成する必要があります。 次の*appsettings*の例では、TLS で保護された HTTP/2 エンドポイントが用意されています。
 
@@ -115,7 +115,7 @@ public class GreeterService : Greeter.GreeterBase
 
 ### <a name="resolve-httpcontext-in-grpc-methods"></a>GRPC メソッドでの HttpContext の解決
 
-GRPC API は、メソッド、ホスト、ヘッダー、トレーラーなど、一部の HTTP/2 メッセージデータへのアクセスを提供します。 アクセスは、各`ServerCallContext` grpc メソッドに渡される引数を使用して行われます。
+gRPC API は、メソッド、ホスト、ヘッダー、トレーラーなど、一部の HTTP/2 メッセージデータへのアクセスを提供します。 アクセスは、各`ServerCallContext` gRPC メソッドに渡される引数を使用して行われます。
 
 [!code-csharp[](~/grpc/aspnetcore/sample/GrcpService/GreeterService.cs?highlight=3-4&name=snippet)]
 

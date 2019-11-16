@@ -24,9 +24,9 @@ ms.locfileid: "71250734"
 > [!WARNING]
 > サーバー側のログには、アプリからの機密情報が含まれている場合があります。 運用アプリから GitHub などのパブリックフォーラムに未加工のログを投稿**しない**でください。
 
-GRPC サービスは ASP.NET Core でホストされるため、ASP.NET Core ログシステムを使用します。 既定の構成では、gRPC はほとんど情報をログに記録しませんが、これは構成できます。 ASP.NET Core ログの構成の詳細については、 [ASP.NET Core のログ記録](xref:fundamentals/logging/index#configuration)に関するドキュメントを参照してください。
+gRPC サービスは ASP.NET Core でホストされるため、ASP.NET Core ログシステムを使用します。 既定の構成では、gRPC はほとんど情報をログに記録しませんが、これは構成できます。 ASP.NET Core ログの構成の詳細については、 [ASP.NET Core のログ記録](xref:fundamentals/logging/index#configuration)に関するドキュメントを参照してください。
 
-grpc は、カテゴリの`Grpc`下にログを追加します。 Grpc から詳細なログを有効にする`Grpc`には、 `Debug`の`LogLevel` `Logging`サブセクションに次の項目を追加して、 *appsettings*ファイルのレベルにプレフィックスを構成します。
+gRPC は、カテゴリの`Grpc`下にログを追加します。 gRPC から詳細なログを有効にする`Grpc`には、 `Debug`の`LogLevel` `Logging`サブセクションに次の項目を追加して、 *appsettings*ファイルのレベルにプレフィックスを構成します。
 
 [!code-json[](diagnostics/sample/logging-config.json?highlight=7)]
 
@@ -44,7 +44,7 @@ JSON ベースの構成を使用していない場合は、構成システムで
 
 ### <a name="sample-logging-output"></a>サンプルのログ記録の出力
 
-Grpc サービスの`Debug`レベルでのコンソール出力の例を次に示します。
+gRPC サービスの`Debug`レベルでのコンソール出力の例を次に示します。
 
 ```console
 info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
@@ -84,7 +84,7 @@ info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
 
 [!code-csharp[](diagnostics/sample/net-client-dependency-injection.cs?highlight=7,16)]
 
-クライアントのログ記録を有効にする別の方法として、 [Grpc クライアントファクトリ](xref:grpc/clientfactory)を使用してクライアントを作成する方法があります。 クライアントファクトリに登録され、DI から解決される gRPC クライアントは、アプリの構成済みログを自動的に使用します。
+クライアントのログ記録を有効にする別の方法として、 [gRPC クライアントファクトリ](xref:grpc/clientfactory)を使用してクライアントを作成する方法があります。 クライアントファクトリに登録され、DI から解決される gRPC クライアントは、アプリの構成済みログを自動的に使用します。
 
 アプリが DI を使用していない場合は、 `ILoggerFactory` [server.loggerfactory](xref:Microsoft.Extensions.Logging.LoggerFactory.Create*)を使用して新しいインスタンスを作成できます。 このメソッドにアクセスするには、アプリに[Microsoft 拡張子のログ](https://www.nuget.org/packages/microsoft.extensions.logging/)パッケージを追加します。
 
@@ -92,7 +92,7 @@ info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
 
 ### <a name="sample-logging-output"></a>サンプルのログ記録の出力
 
-Grpc クライアントの`Debug`レベルでのコンソール出力の例を次に示します。
+gRPC クライアントの`Debug`レベルでのコンソール出力の例を次に示します。
 
 ```console
 dbug: Grpc.Net.Client.Internal.GrpcCall[1]
