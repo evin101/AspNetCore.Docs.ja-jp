@@ -48,11 +48,11 @@ Console.WriteLine($"Current user: {Thread.CurrentPrincipal?.Identity.Name}");
 `ClaimsPrincipal.Current`の代わりに ASP.NET Core で現在認証されているユーザーの `ClaimsPrincipal` を取得するには、いくつかのオプションがあります。
 
 * **コントローラーの基本ユーザー**。 MVC コントローラーは、[ユーザー](/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.user)プロパティを使用して、現在の認証済みユーザーにアクセスできます。
-* **HttpContext. ユーザー**。 現在の `HttpContext` (ミドルウェアなど) にアクセスできるコンポーネントは、現在のユーザーの `ClaimsPrincipal` を[HttpContext. user](/dotnet/api/microsoft.aspnetcore.http.httpcontext.user)から取得できます。
+* **HttpContext. ユーザー**。 現在の `HttpContext` (ミドルウェアなど) にアクセスできるコンポーネントは、現在のユーザーの `ClaimsPrincipal` を[HttpContext.User](/dotnet/api/microsoft.aspnetcore.http.httpcontext.user)から取得できます。
 * **呼び出し元から渡さ**れました。 現在の `HttpContext` にアクセスできないライブラリは、多くの場合コントローラーまたはミドルウェアコンポーネントから呼び出され、現在のユーザーの id を引数として渡すことができます。
 * **IHttpContextAccessor**。 ASP.NET Core に移行されるプロジェクトが大きすぎて、現在のユーザーの id を必要なすべての場所に簡単に渡すことができない場合があります。 このような場合は、回避策として[IHttpContextAccessor](/dotnet/api/microsoft.aspnetcore.http.ihttpcontextaccessor)を使用できます。 `IHttpContextAccessor` は現在の `HttpContext` にアクセスできます (存在する場合)。 DI が使用されている場合は、「<xref:fundamentals/httpcontext>」を参照してください。 ASP.NET Core の DI ドリブンアーキテクチャで動作するようにまだ更新されていないコードで現在のユーザーの id を取得するための短期的なソリューションは次のようになります。
 
-  * `Startup.ConfigureServices`で[Addhttpcontextaccessor](https://github.com/aspnet/Hosting/issues/793)を呼び出して、`IHttpContextAccessor` DI コンテナーで使用できるようにします。
+  * `Startup.ConfigureServices`で[AddHttpContextAccessor](https://github.com/aspnet/Hosting/issues/793)を呼び出して、`IHttpContextAccessor` DI コンテナーで使用できるようにします。
   * 起動時に `IHttpContextAccessor` のインスタンスを取得し、静的変数に格納します。 インスタンスは、以前に静的プロパティから現在のユーザーを取得していたコードで使用できるようになります。
   * `HttpContextAccessor.HttpContext?.User`を使用して、現在のユーザーの `ClaimsPrincipal` を取得します。 このコードが HTTP 要求のコンテキストの外部で使用されている場合、`HttpContext` は null になります。
 
